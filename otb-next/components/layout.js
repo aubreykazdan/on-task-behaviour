@@ -4,9 +4,11 @@ import Header from "./sections/header";
 export default function Layout({ children, categories, settings }) {
   console.log(settings);
   return (
-    <div className="container mx-auto ">
+    <div className="">
       <Header categories={categories} />
-      <main className="flex flex-col min-h-screen">{children}</main>
+      <main className="flex flex-col min-h-screen container mx-auto">
+        {children}
+      </main>
       <Footer settings={settings} />
     </div>
   );

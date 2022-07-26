@@ -3,9 +3,9 @@ import Navlink from "../navlink";
 
 export default function Header({ categories }) {
   return (
-    <header className="mb-4 border">
+    <header className="py-4 mb-4">
       <Headroom>
-        <ul className="flex justify-between">
+        <ul className="flex justify-between container mx-auto">
           <Navlink internal="/">
             <h1 className="text-4xl text-purple uppercase">On Task</h1>
           </Navlink>
