@@ -2,7 +2,6 @@ import Footer from "./sections/footer";
 import Header from "./sections/header";
 
 export default function Layout({ children, categories, settings }) {
-  console.log(settings);
   return (
     <div className="">
       <Header categories={categories} />

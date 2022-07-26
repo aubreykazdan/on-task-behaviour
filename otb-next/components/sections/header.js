@@ -1,5 +1,6 @@
 import Headroom from "react-headroom";
 import Navlink from "../navlink";
+import MobileMenu from "../mobile/mobileMenu";
 
 export default function Header({ categories }) {
   return (
@@ -21,6 +22,9 @@ export default function Header({ categories }) {
                   </li>
                 );
               })}
+          </div>
+          <div className="md:hidden">
+            <MobileMenu />
           </div>
         </ul>
       </Headroom>
