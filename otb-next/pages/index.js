@@ -2,15 +2,16 @@ import { getClient } from "../lib/sanity.server";
 import { navQuery, settingsQuery, socialsQuery } from "../lib/queries";
 
 import Meta from "../components/meta";
+import Layout from "../components/layout";
 
 export default function Home({ data }) {
   const { settings } = data;
+  console.log(settings);
   return (
-    <div>
+    <Layout settings={settings}>
       <Meta settings={settings} />
-      {/* <Header mainNav={mainNav} socials={socials} logo={siteLogo} /> */}
       <h1 className="text-3xl">On Task Behaviour</h1>
-    </div>
+    </Layout>
   );
 }
 
