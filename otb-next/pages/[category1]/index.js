@@ -33,7 +33,6 @@ export default function CategoryOne({ data, preview }) {
     <p>Loading...</p>
   ) : (
     <Layout>
-      <Header categories={categories} />
       <div>{title}</div>
     </Layout>
   );

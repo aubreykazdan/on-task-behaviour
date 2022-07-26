@@ -12,9 +12,11 @@ export default function Contact({ data }) {
   const { settings, categories } = data;
   return (
     <Layout>
-      <Header categories={categories} />
-
-      <div>This is the contact page</div>
+      <div>
+        <span>Send love letters to:</span>
+        <p>Canada: 1124 College St, Toronto ON M6H 1B6</p>
+        <p>US: PO Box 1153 Ogdensburg NY 13669</p>
+      </div>
     </Layout>
   );
 }
