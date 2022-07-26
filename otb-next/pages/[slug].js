@@ -9,8 +9,6 @@ import {
 } from "../lib/queries";
 import { urlForImage, usePreviewSubscription } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
-import Header from "../components/sections/header";
-import Meta from "../components/meta";
 
 export default function Page({ data = {}, preview }) {
   const router = useRouter();
