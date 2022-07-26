@@ -21,6 +21,11 @@ export default {
       title: "Copyright",
       type: "string",
     },
+    {
+      name: "ogImage",
+      title: "OG Image",
+      type: "image",
+    },
   ],
   preview: {
     select: {

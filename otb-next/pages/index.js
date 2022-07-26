@@ -1,21 +1,14 @@
 import { getClient } from "../lib/sanity.server";
-import {
-  eventsQuery,
-  homeQuery,
-  mainNavQuery,
-  navQuery,
-  settingsQuery,
-  siteSettingsQuery,
-  socialsQuery,
-} from "../lib/queries";
+import { navQuery, settingsQuery, socialsQuery } from "../lib/queries";
 
-export default function Home({ page, settings, mainNav, socials, events }) {
-  // const { pageBuilder } = page;
-  // const { siteLogo, websiteTitle } = settings;
+import Meta from "../components/meta";
+
+export default function Home({ data }) {
+  const { settings } = data;
   return (
     <div>
-      {/* <Meta page={page} title={websiteTitle} />
-      <Header mainNav={mainNav} socials={socials} logo={siteLogo} /> */}
+      <Meta settings={settings} />
+      {/* <Header mainNav={mainNav} socials={socials} logo={siteLogo} /> */}
       <h1 className="text-3xl">On Task Behaviour</h1>
     </div>
   );
