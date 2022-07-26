@@ -6,19 +6,13 @@
   html,
   body {
     background: white;
-    font-family: inter;
+    font-family: Montserrat;
     letter-spacing: 0;
     line-height: 1.2;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0px;
     padding: 0px;
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-
-.react-calendar .highlight {
-  outline: 1px solid black;
-  background: #006edc;
-  color: white;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");

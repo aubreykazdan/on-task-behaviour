@@ -3,7 +3,7 @@ export default function Layout({ children, data, router }) {
   return (
     <div className="min-h-screen w-screen flex flex-col">
       {/* <Header navMenu={navMenu} categories={categories} router={router} /> */}
-      <main className="">{children}</main>
+      <main className="container mx-auto border">{children}</main>
       {/* <Footer
         navMenu={navMenu}
         categories={categories}

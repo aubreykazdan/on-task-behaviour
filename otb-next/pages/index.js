@@ -16,7 +16,7 @@ export default function Home({ page, settings, mainNav, socials, events }) {
     <div>
       {/* <Meta page={page} title={websiteTitle} />
       <Header mainNav={mainNav} socials={socials} logo={siteLogo} /> */}
-      <h1>This is a page</h1>
+      <h1 className="text-3xl">On Task Behaviour</h1>
     </div>
   );
 }
