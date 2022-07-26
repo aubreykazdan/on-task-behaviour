@@ -59,24 +59,25 @@ export default {
       type: "reference",
       title: "Parent",
       to: [{ type: "category" }],
+      weak: true,
       options: {
         filter: "!defined(parent)",
       },
     },
   ],
-  preview: {
-    select: {
-      title: "name",
-      subtitle: "parent.name",
-    },
-    prepare(selection) {
-      const { title, subtitle } = selection;
-      return {
-        title: title,
-        subtitle: `Parent: ${subtitle ? subtitle : "N/A"}`,
-      };
-    },
-  },
+  // preview: {
+  //   select: {
+  //     title: "name",
+  //     subtitle: "parent.name",
+  //   },
+  //   prepare(selection) {
+  //     const { title, subtitle } = selection;
+  //     return {
+  //       title: title,
+  //       subtitle: `Parent: ${subtitle ? subtitle : "N/A"}`,
+  //     };
+  //   },
+  // },
   orderings: [
     {
       title: "Manual order",

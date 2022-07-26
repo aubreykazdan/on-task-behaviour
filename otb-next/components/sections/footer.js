@@ -1,9 +1,11 @@
 export default function Footer({ settings }) {
-  // const { copyright } = settings;
-  console.log(settings);
+  const { copyright } = settings;
   return (
-    <footer>
-      <div></div>
+    <footer className="mt-auto">
+      <p>
+        {new Date().getFullYear()} {""}
+        {copyright}
+      </p>
     </footer>
   );
 }

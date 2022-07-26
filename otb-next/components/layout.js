@@ -1,11 +1,9 @@
 import Footer from "./sections/footer";
 
-export default function Layout({ children, settings }) {
+export default function Layout({ children }) {
   return (
-    <div className="min-h-screen w-screen flex flex-col">
-      {/* <Header navMenu={navMenu} categories={categories} router={router} /> */}
-      <main className="container mx-auto border">{children}</main>
-      <Footer settings={settings} />
-    </div>
+    <main className="container mx-auto flex flex-col min-h-screen">
+      {children}
+    </main>
   );
 }

@@ -25,3 +25,12 @@ export const navQuery = `
   }
 }
 `;
+
+export const categoriesQuery = `
+*[_type == "category"] {
+  "id": _id,
+  title,
+  "slug": slug.current,
+  "fullPath": fullPath.current,
+}
+`;
