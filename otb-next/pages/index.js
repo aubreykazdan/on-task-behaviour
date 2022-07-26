@@ -3,6 +3,8 @@ import {
   eventsQuery,
   homeQuery,
   mainNavQuery,
+  navQuery,
+  settingsQuery,
   siteSettingsQuery,
   socialsQuery,
 } from "../lib/queries";
@@ -20,20 +22,18 @@ export default function Home({ page, settings, mainNav, socials, events }) {
 }
 
 export async function getServerSideProps({ preview = false }) {
-  const page = await getClient(preview).fetch(homeQuery);
-  const settings = await getClient(preview).fetch(siteSettingsQuery);
-  const mainNav = await getClient(preview).fetch(mainNavQuery);
+  const settings = await getClient(preview).fetch(settingsQuery);
+  const navigation = await getClient(preview).fetch(navQuery);
   const socials = await getClient(preview).fetch(socialsQuery);
-  const events = await getClient(preview).fetch(eventsQuery);
 
   return {
     props: {
-      page,
-      events,
-      settings,
-      mainNav,
-      socials,
       preview,
+      data: {
+        settings,
+        navigation,
+        socials,
+      },
     },
   };
 }
