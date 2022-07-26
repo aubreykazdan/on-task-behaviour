@@ -3,19 +3,17 @@ import { useRouter } from "next/router";
 
 import Layout from "../components/layout";
 import { categoriesQuery, settingsQuery, socialsQuery } from "../lib/queries";
-import Header from "../components/sections/header";
-import Link from "next/link";
 
 export default function Contact({ data }) {
   const router = useRouter();
 
   const { settings, categories } = data;
   return (
-    <Layout>
+    <Layout categories={categories} settings={settings}>
       <div>
-        <span>Send love letters to:</span>
-        <p>Canada: 1124 College St, Toronto ON M6H 1B6</p>
-        <p>US: PO Box 1153 Ogdensburg NY 13669</p>
+        <p className="text-3xl">Send love letters to:</p>
+        <p className="">Canada: 1124 College St, Toronto ON M6H 1B6</p>
+        <p className="">US: PO Box 1153 Ogdensburg NY 13669</p>
       </div>
     </Layout>
   );

@@ -9,16 +9,13 @@ import {
 import Meta from "../components/meta";
 import Layout from "../components/layout";
 import Footer from "../components/sections/footer";
-import Header from "../components/sections/header";
 
 export default function Home({ data }) {
   const { settings, categories } = data;
   return (
-    <Layout categories={categories}>
+    <Layout categories={categories} settings={settings}>
       <Meta settings={settings} />
       <p className="">The quick brown fox jumped over the lazy dog</p>
-      {/* <div className="'border h-screen"></div> */}
-      <Footer settings={settings} />
     </Layout>
   );
 }
