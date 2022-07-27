@@ -12,6 +12,7 @@ module.exports = {
       // background colour
       beige: "#F5EDD6",
       lightPurple: "#F5F5FF",
+      lightGray: "#f2f2f2",
     },
     fontFamily: {
       inter: ["Monserrat", "sans-serif"],
