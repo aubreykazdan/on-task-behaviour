@@ -1,6 +1,6 @@
 import Headroom from "react-headroom";
 import Navlink from "../navlink";
-import MobileMenu from "../mobile/mobileMenu";
+import { MobileMenu } from "../mobileMenu";
 
 export default function Header({ categories }) {
   return (
@@ -14,7 +14,7 @@ export default function Header({ categories }) {
             <div className="hidden md:flex items-center">
               {categories &&
                 categories.map((item) => {
-                  const { id, title, slug, fullPath } = item;
+                  const { id, title, slug } = item;
                   return (
                     <li key={id} className="mr-2 p-2">
                       <a rel="noreferrer" href={slug}>
@@ -25,7 +25,7 @@ export default function Header({ categories }) {
                 })}
             </div>
             <div className="md:hidden">
-              <MobileMenu />
+              <MobileMenu categories={categories}/>
             </div>
           </ul>
         </div>

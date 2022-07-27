@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
 
-const Path = (props) => (
-  <motion.path
-    fill="transparent"
-    strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
-    strokeLinecap="round"
-    {...props}
-  />
-);
+export function MenuToggle({ toggle }) {
+  const Path = (props) => (
+    <motion.path
+      strokeWidth="3"
+      stroke="hsl(0, 0%, 18%)"
+      strokeLinecap="round"
+      {...props}
+    />
+  );
 
-export default function MenuToggle({ toggle }) {
   return (
     <button
+      aria-label="Mobile Menu Toggle"
       onClick={toggle}
       className="relative flex justify-center items-center focus:outline-none"
     >
