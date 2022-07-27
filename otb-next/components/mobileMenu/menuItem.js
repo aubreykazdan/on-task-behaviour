@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export function MenuItem({ item, toggleOpen, children }) {
+export function MenuItem({ external, slug, toggleOpen, children }) {
   const variants = {
     open: {
       y: 0,
@@ -18,7 +18,6 @@ export function MenuItem({ item, toggleOpen, children }) {
       },
     },
   };
-  const { external, internal } = item;
 
   return (
     <motion.li variants={variants} className="mb-1">
@@ -28,7 +27,7 @@ export function MenuItem({ item, toggleOpen, children }) {
             {children}
           </a>
         ) : (
-          <Link href={internal}>
+          <Link href={slug}>
             <a onClick={toggleOpen}>{children}</a>
           </Link>
         )}

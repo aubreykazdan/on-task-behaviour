@@ -4,7 +4,6 @@ import { Navigation } from "./navigation";
 
 export function MobileMenu({ categories }) {
   const [isOpen, toggleOpen] = useCycle(false, true);
-  // console.log(categories);
   return (
     <motion.nav
       initial={false}
@@ -16,7 +15,7 @@ export function MobileMenu({ categories }) {
         toggleOpen={toggleOpen}
         categories={categories}
       />
-      <MenuToggle />
+      <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );
 }
