@@ -20,7 +20,7 @@ export function MenuItem({ external, slug, toggleOpen, children }) {
   };
 
   return (
-    <motion.li variants={variants} className="mb-1">
+    <motion.li variants={variants} className="mb-4">
       <motion.div whileHover={{ x: -5 }} whileTap={{ x: 5 }}>
         {external ? (
           <a href={external} rel="noreferer" target="_blank">

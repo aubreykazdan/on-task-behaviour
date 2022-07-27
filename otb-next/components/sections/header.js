@@ -6,7 +6,7 @@ export default function Header({ categories }) {
   return (
     <header className="mb-4">
       <Headroom>
-        <ul className="flex justify-between items-center container mx-auto p-4">
+        <ul className="flex justify-between items-center container mx-auto p-4 bg-white">
           <Navlink internal="/">
             <h1 className="text-4xl text-purple uppercase">On Task</h1>
           </Navlink>

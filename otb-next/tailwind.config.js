@@ -13,6 +13,7 @@ module.exports = {
       beige: "#F5EDD6",
       lightPurple: "#F5F5FF",
       lightGray: "#f2f2f2",
+      white: "#ffffff",
     },
     fontFamily: {
       inter: ["Monserrat", "sans-serif"],

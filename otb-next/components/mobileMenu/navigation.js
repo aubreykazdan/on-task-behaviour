@@ -28,16 +28,17 @@ export function Navigation({ isOpen, toggleOpen, categories }) {
   return (
     isOpen && (
       <RemoveScroll>
-        <div className="absolute top-0 left-0 w-screen h-screen bg-lightGray z-1">
-          <motion.ul
-            variants={variants}
-            className="fixed right-0 h-full text-right text-base px-8 py-4 mb-8"
-          >
-            <p className="uppercase text-green mb-8">On Task</p>
+        <div className="absolute top-0 left-0 w-screen h-screen bg-white z-1">
+          <motion.ul variants={variants} className="text-right mt-20 px-4">
+            <p className="uppercase text-2xl mb-4">On Task</p>
             {categories &&
               categories.map((item) => {
-                const { slug } = item;
-                return <MenuItem slug={slug} toggleOpen={toggleOpen} />;
+                const { slug, id, title } = item;
+                return (
+                  <MenuItem key={id} slug={slug} toggleOpen={toggleOpen}>
+                    {title}
+                  </MenuItem>
+                );
               })}
 
             {/* <ul className="mt-10 flex flex-col items-end">
