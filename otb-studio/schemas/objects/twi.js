@@ -6,14 +6,9 @@ export default {
   title: "Text with Illustration",
   fields: [
     {
-      name: "heading",
+      name: "title",
+      type: "title",
       type: "string",
-      title: "Heading",
-    },
-    {
-      name: "tagline",
-      type: "string",
-      title: "Tagline",
     },
     {
       name: "content",

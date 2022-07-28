@@ -72,3 +72,20 @@ export const homeQuery = `
 export const contactQuery = `
 *[_type == "contactCopy"][0]
 `;
+
+export const galleryQuery = `
+*[_type == "gallery"][0]{
+  ...,
+  items[]{
+    ...,
+    image{
+    "asset": asset->url,
+    crop,
+    hotspot,
+    "aspectRatio": asset->metadata.dimensions.aspectRatio,
+    "height": asset->metadata.dimensions.height,
+    "width": asset->metadata.dimensions.width,
+  },
+ }
+}
+`;

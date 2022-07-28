@@ -15,22 +15,11 @@ export default {
       options: { source: "title" },
     },
     // {
-    //   name: "category",
-    //   title: "Categories",
-    //   type: "array",
-    //   of: [
-    //     {
-    //       type: "reference",
-    //       to: [{ type: "category" }],
-    //     },
-    //   ],
-    // },
-    // {
     //   name: "slug",
     //   title: "Slug",
     //   type: "slug",
     //   options: {
-    //     source: (doc, options) => options.parent.title,
+    //     source: (doc, options) => options.title,
     //   },
     // },
   ],

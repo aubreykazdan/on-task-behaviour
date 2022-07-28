@@ -78,6 +78,8 @@ export default () =>
         .title("Events")
         .child(S.documentTypeList("event").title("Events")),
 
+      S.documentListItem().id("gallery").schemaType("gallery").title("Gallery"),
+
       S.divider(),
 
       S.documentListItem().id("homeCopy").schemaType("homeCopy").title("Home"),
@@ -106,6 +108,8 @@ export default () =>
           "product",
           "category",
           "event",
+          "gallery",
+          "twi",
         ].includes(listItem.getId());
       }),
     ]);

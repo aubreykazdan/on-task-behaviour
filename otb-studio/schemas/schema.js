@@ -12,6 +12,8 @@ import aboutCopy from "./documents/aboutCopy";
 import homeCopy from "./documents/homeCopy";
 import contactCopy from "./documents/contactCopy";
 import form from "./objects/form";
+import gallery from "./documents/gallery";
+import twi from "./objects/twi";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,5 +31,7 @@ export default createSchema({
     cta,
     category,
     socials,
+    gallery,
+    twi,
   ]),
 });
