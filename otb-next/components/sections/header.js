@@ -7,13 +7,15 @@ export default function Header({ categories, socials }) {
   const { tiktok, instagram } = socials;
 
   return (
-    <header className="mb-4 uppercase">
+    <header className="mb-4 uppercase text-base">
       <Headroom>
         <ul className="flex justify-between items-center container mx-auto p-4 bg-white">
           <Navlink internal="/">
-            <h1 className="text-4xl text-purple uppercase">On Task</h1>
+            <h1 className="text-4xl text-purple uppercase whitespace-nowrap">
+              On Task
+            </h1>
           </Navlink>
-          <div className="hidden md:flex items-center">
+          <div className="hidden lg:flex items-center">
             {categories &&
               categories.map((item) => {
                 const { id, title, slug } = item;
@@ -23,9 +25,6 @@ export default function Header({ categories, socials }) {
                   </li>
                 );
               })}
-            {/* <li className="mr-2 p-2">
-              <Navlink internal="donate">Donate</Navlink>
-            </li> */}
             <div className="mr-4 text-2xl">
               <Instagram external={instagram} />
             </div>
@@ -33,7 +32,7 @@ export default function Header({ categories, socials }) {
               <TikTok external={tiktok} />
             </div>
           </div>
-          <div className="md:hidden">
+          <div className="flex lg:hidden">
             <MobileMenu categories={categories} socials={socials} />
           </div>
         </ul>

@@ -8,7 +8,7 @@ export function MobileMenu({ categories, socials }) {
     <motion.nav
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className={`md:hidden flex items-center flex-col justify-center`}
+      className={`lg:hidden flex items-center flex-col justify-center`}
     >
       <Navigation
         isOpen={isOpen}
