@@ -75,8 +75,8 @@ export const contactQuery = `
 
 export const galleryQuery = `
 *[_type == "gallery"][0]{
-  ...,
-  items[]{
+  title,
+  "items":galleryItems[]{
     ...,
     image{
     "asset": asset->url,

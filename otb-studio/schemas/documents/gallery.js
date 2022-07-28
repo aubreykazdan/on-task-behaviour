@@ -9,9 +9,9 @@ export default {
       type: "string",
     },
     {
-      name: "items",
+      name: "galleryItems",
       type: "array",
-      title: "Items",
+      title: "Gallery Items",
       of: [{ type: "twi" }],
     },
   ],

@@ -14,6 +14,7 @@ import Img from "../../components/img";
 
 export default function Gallery({ data }) {
   const router = useRouter();
+  console.log(data);
   const { galleryItems } = data;
   const { items } = galleryItems;
 
