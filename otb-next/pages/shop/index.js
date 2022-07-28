@@ -1,8 +1,8 @@
-import { getClient } from "../lib/sanity.server";
+import { getClient } from "../../lib/sanity.server";
 import { useRouter } from "next/router";
 
-import Layout from "../components/layout";
-import { categoriesQuery, settingsQuery, socialsQuery } from "../lib/queries";
+import Layout from "../../components/layout";
+import { categoriesQuery, settingsQuery, socialsQuery } from "../../lib/queries";
 
 export default function Shop({ data }) {
   const router = useRouter();

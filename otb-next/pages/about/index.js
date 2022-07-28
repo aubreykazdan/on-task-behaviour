@@ -1,15 +1,15 @@
-import { getClient } from "../lib/sanity.server";
+import { getClient } from "../../lib/sanity.server";
 import { useRouter } from "next/router";
 
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 import {
   aboutQuery,
   categoriesQuery,
   settingsQuery,
   socialsQuery,
-} from "../lib/queries";
-import Content from "../components/content";
-import Img from "../components/img";
+} from "../../lib/queries";
+import Content from "../../components/content";
+import Img from "../../components/img";
 
 export default function About({ data }) {
   const router = useRouter();

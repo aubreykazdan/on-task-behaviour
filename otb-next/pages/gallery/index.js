@@ -1,16 +1,16 @@
-import { getClient } from "../lib/sanity.server";
+import { getClient } from "../../lib/sanity.server";
 import { useRouter } from "next/router";
 
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 import {
   categoriesQuery,
   galleryQuery,
   settingsQuery,
   socialsQuery,
-} from "../lib/queries";
-import Photo from "../components/photo";
-import Content from "../components/content";
-import Img from "../components/img";
+} from "../../lib/queries";
+import Photo from "../../components/photo";
+import Content from "../../components/content";
+import Img from "../../components/img";
 
 export default function Gallery({ data }) {
   const router = useRouter();

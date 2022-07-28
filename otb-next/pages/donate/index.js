@@ -1,10 +1,10 @@
-import { getClient } from "../lib/sanity.server";
+import { getClient } from "../../lib/sanity.server";
 import { useRouter } from "next/router";
 
-import Layout from "../components/layout";
-import { categoriesQuery, settingsQuery, socialsQuery } from "../lib/queries";
+import Layout from "../../components/layout";
+import { categoriesQuery, settingsQuery, socialsQuery } from "../../lib/queries";
 
-export default function News({ data }) {
+export default function Donate({ data }) {
   const router = useRouter();
 
   return router.isFallback ? (
@@ -12,7 +12,7 @@ export default function News({ data }) {
   ) : (
     <Layout data={data}>
       <div className="">
-        <p className="text-3xl">News</p>
+        <p className="text-3xl">Donate</p>
       </div>
     </Layout>
   );
