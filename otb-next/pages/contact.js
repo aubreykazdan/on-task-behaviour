@@ -2,17 +2,25 @@ import { getClient } from "../lib/sanity.server";
 import { useRouter } from "next/router";
 
 import Layout from "../components/layout";
-import { categoriesQuery, settingsQuery, socialsQuery } from "../lib/queries";
+import {
+  categoriesQuery,
+  contactQuery,
+  settingsQuery,
+  socialsQuery,
+} from "../lib/queries";
+import Content from "../components/content";
 
 export default function Contact({ data }) {
   const router = useRouter();
 
+  const { contactCopy } = data;
+  const { content, title } = contactCopy;
+
   return (
     <Layout data={data}>
-      <div className="space-y-4">
-        <p className="text-3xl">Send love letters to:</p>
-        <p className="">Canada: 1124 College St, Toronto ON M6H 1B6</p>
-        <p className="">US: PO Box 1153 Ogdensburg NY 13669</p>
+      <div className="">
+        <h3 className="text-3xl">{title}</h3>
+        <Content blocks={content} />
       </div>
     </Layout>
   );
@@ -22,10 +30,12 @@ export async function getServerSideProps({ params, preview = false }) {
   const categories = await getClient(preview).fetch(categoriesQuery);
   const settings = await getClient(preview).fetch(settingsQuery);
   const socials = await getClient(preview).fetch(socialsQuery);
+  const contactCopy = await getClient(preview).fetch(contactQuery);
   return {
     props: {
       preview,
       data: {
+        contactCopy,
         settings,
         categories,
         socials,

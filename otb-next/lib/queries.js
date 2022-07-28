@@ -54,3 +54,21 @@ export const aboutQuery = `
   },
 }
 `;
+
+export const homeQuery = `
+*[_type == "homeCopy"][0]{
+  ...,
+  image{
+    "asset": asset->url,
+    crop,
+    hotspot,
+    "aspectRatio": asset->metadata.dimensions.aspectRatio,
+    "height": asset->metadata.dimensions.height,
+    "width": asset->metadata.dimensions.width,
+  },
+}
+`;
+
+export const contactQuery = `
+*[_type == "contactCopy"][0]
+`;

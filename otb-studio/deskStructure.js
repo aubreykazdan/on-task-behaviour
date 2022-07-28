@@ -80,14 +80,23 @@ export default () =>
 
       S.divider(),
 
+      S.documentListItem().id("homeCopy").schemaType("homeCopy").title("Home"),
+
       S.documentListItem()
         .id("aboutCopy")
         .schemaType("aboutCopy")
         .title("About"),
 
+      S.documentListItem()
+        .id("contactCopy")
+        .schemaType("contactCopy")
+        .title("Contact"),
+
       ...S.documentTypeListItems().filter((listItem) => {
         return ![
           "aboutCopy",
+          "homeCopy",
+          "contactCopy",
           "category",
           "siteSettings",
           "navMenu",

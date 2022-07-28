@@ -25,6 +25,12 @@ module.exports = {
       maxHeight: {
         600: 600,
       },
+      minWidth: {
+        600: 600,
+      },
+      minHeight: {
+        600: 600,
+      },
     },
   },
   plugins: [],

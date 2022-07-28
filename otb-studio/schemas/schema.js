@@ -9,6 +9,9 @@ import cta from "./objects/cta";
 import category from "./documents/category";
 import socials from "./documents/socials";
 import aboutCopy from "./documents/aboutCopy";
+import homeCopy from "./documents/homeCopy";
+import contactCopy from "./documents/contactCopy";
+import form from "./objects/form";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -16,6 +19,9 @@ export default createSchema({
   types: schemaTypes.concat([
     // your types here\
     aboutCopy,
+    homeCopy,
+    contactCopy,
+    form,
     blockContent,
     siteSettings,
     event,
