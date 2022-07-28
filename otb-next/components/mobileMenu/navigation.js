@@ -29,7 +29,7 @@ export function Navigation({ isOpen, toggleOpen, categories }) {
     isOpen && (
       <RemoveScroll>
         <div className="absolute top-0 left-0 w-screen h-screen bg-white z-1">
-          <motion.ul variants={variants} className="text-right mt-20 px-4">
+          <motion.ul variants={variants} className="text-right mt-20 mr-4">
             <p className="uppercase text-2xl mb-4">On Task</p>
             {categories &&
               categories.map((item) => {
