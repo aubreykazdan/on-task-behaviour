@@ -19,6 +19,7 @@ import shopCopy from "./documents/shopCopy";
 import donateCopy from "./documents/donateCopy";
 import newsCopy from "./documents/newsCopy";
 import galleryCopy from "./documents/galleryCopy";
+import eventsCopy from "./documents/eventsCopy";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,6 +29,7 @@ export default createSchema({
     aboutCopy,
     homeCopy,
     contactCopy,
+    eventsCopy,
     shopCopy,
     donateCopy,
     newsCopy,

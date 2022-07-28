@@ -26,7 +26,7 @@ export default function About({ data }) {
           <Img image={image} alt={alt} />
         </div>
         <div className="mb-4">
-          <p className="text-3xl">{title}</p>
+          <p className="text-3xl uppercase">{title}</p>
           <Content blocks={content} />
         </div>
       </div>

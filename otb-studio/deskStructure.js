@@ -102,6 +102,11 @@ export default () =>
         .title("Donate"),
 
       S.documentListItem()
+        .id("eventsCopy")
+        .schemaType("eventsCopy")
+        .title("Events"),
+
+      S.documentListItem()
         .id("galleryCopy")
         .schemaType("galleryCopy")
         .title("Gallery"),
@@ -121,6 +126,7 @@ export default () =>
           "donateCopy",
           "newsCopy",
           "galleryCopy",
+          "eventsCopy",
           "category",
           "siteSettings",
           "navMenu",
