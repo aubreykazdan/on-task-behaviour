@@ -18,6 +18,14 @@ module.exports = {
     fontFamily: {
       inter: ["Monserrat", "sans-serif"],
     },
+    extend: {
+      maxWidth: {
+        600: 600,
+      },
+      maxHeight: {
+        600: 600,
+      },
+    },
   },
   plugins: [],
 };

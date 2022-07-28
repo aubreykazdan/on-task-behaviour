@@ -42,5 +42,15 @@ export const categoryOneQuery = `
 `;
 
 export const aboutQuery = `
-*[_type == "aboutCopy"][0]
+*[_type == "aboutCopy"][0]{
+  ...,
+  image{
+    "asset": asset->url,
+    crop,
+    hotspot,
+    "aspectRatio": asset->metadata.dimensions.aspectRatio,
+    "height": asset->metadata.dimensions.height,
+    "width": asset->metadata.dimensions.width,
+  },
+}
 `;
