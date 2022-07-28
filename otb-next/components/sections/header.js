@@ -23,9 +23,9 @@ export default function Header({ categories, socials }) {
                   </li>
                 );
               })}
-            <li className="mr-2 p-2">
+            {/* <li className="mr-2 p-2">
               <Navlink internal="donate">Donate</Navlink>
-            </li>
+            </li> */}
             <div className="mr-4 text-2xl">
               <Instagram external={instagram} />
             </div>

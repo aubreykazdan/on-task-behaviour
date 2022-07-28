@@ -4,6 +4,7 @@ import Header from "./sections/header";
 
 export default function Layout({ children, data }) {
   const { categories, settings, socials } = data;
+  console.log(categories);
   return (
     <div className="z-50">
       <Meta settings={settings} />

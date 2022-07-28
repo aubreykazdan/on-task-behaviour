@@ -23,21 +23,11 @@ export const navQuery = `
 `;
 
 export const categoriesQuery = `
-*[_type == "category"] {
+*[_type == "category"] | order(order asc){
   "id": _id,
   title,
   "slug": slug.current,
   "fullPath": fullPath.current,
-}
-`;
-
-export const categoryOneQuery = `
-*[_type == "category" && slug.current == $slug][0] {
-  "id": _id,
-  title,
-  "slug": slug.current,
-  "fullPath": fullPath.current,
-  ...,
 }
 `;
 
