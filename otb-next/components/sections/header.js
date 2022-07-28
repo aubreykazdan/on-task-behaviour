@@ -19,12 +19,13 @@ export default function Header({ categories, socials }) {
                 const { id, title, slug } = item;
                 return (
                   <li key={id} className="mr-2 p-2">
-                    <a rel="noreferrer" href={slug}>
-                      {title}
-                    </a>
+                    <Navlink internal={slug}>{title}</Navlink>
                   </li>
                 );
               })}
+            <li className="mr-2 p-2">
+              <Navlink internal="donate">Donate</Navlink>
+            </li>
             <div className="mr-4 text-2xl">
               <Instagram external={instagram} />
             </div>

@@ -43,6 +43,9 @@ export function Navigation({ isOpen, toggleOpen, categories, socials }) {
                   </MenuItem>
                 );
               })}
+            <MenuItem slug="donate" toggleOpen={toggleOpen}>
+              Donate
+            </MenuItem>
             <ul className="flex justify-end">
               <div className="mr-4 text-3xl">
                 <Instagram external={instagram} />
