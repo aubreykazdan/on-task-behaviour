@@ -33,8 +33,9 @@ export default {
     },
     {
       title: "Description",
-      name: "description",
-      type: "string",
+      name: "content",
+      type: "array",
+      of: [{ type: "block" }],
     },
     {
       title: "Cost",
