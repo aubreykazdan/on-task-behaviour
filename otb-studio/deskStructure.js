@@ -74,9 +74,10 @@ export default () =>
         .title("Products")
         .child(S.documentTypeList("product").title("Products")),
 
-      S.listItem()
-        .title("Events")
-        .child(S.documentTypeList("event").title("Events")),
+      S.documentListItem()
+        .id("eventsList")
+        .schemaType("eventsList")
+        .title("Events"),
 
       S.documentListItem().id("gallery").schemaType("gallery").title("Gallery"),
 
@@ -108,6 +109,7 @@ export default () =>
           "product",
           "category",
           "event",
+          "eventsList",
           "gallery",
           "twi",
         ].includes(listItem.getId());
