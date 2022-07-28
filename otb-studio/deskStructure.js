@@ -71,19 +71,20 @@ export default () =>
       S.divider(),
 
       S.listItem()
-        .title("Products")
-        .child(S.documentTypeList("product").title("Products")),
+        .title("Shop Products")
+        .child(S.documentTypeList("product").title("Shop Products")),
 
       S.documentListItem()
         .id("eventsList")
         .schemaType("eventsList")
-        .title("Events"),
+        .title("Events List"),
 
-      S.documentListItem().id("gallery").schemaType("gallery").title("Gallery"),
+      S.documentListItem()
+        .id("gallery")
+        .schemaType("gallery")
+        .title("Gallery List"),
 
       S.divider(),
-
-      S.documentListItem().id("homeCopy").schemaType("homeCopy").title("Home"),
 
       S.documentListItem()
         .id("aboutCopy")
@@ -95,11 +96,31 @@ export default () =>
         .schemaType("contactCopy")
         .title("Contact"),
 
+      S.documentListItem()
+        .id("donateCopy")
+        .schemaType("donateCopy")
+        .title("Donate"),
+
+      S.documentListItem()
+        .id("galleryCopy")
+        .schemaType("galleryCopy")
+        .title("Gallery"),
+
+      S.documentListItem().id("homeCopy").schemaType("homeCopy").title("Home"),
+
+      S.documentListItem().id("newsCopy").schemaType("newsCopy").title("News"),
+
+      S.documentListItem().id("shopCopy").schemaType("shopCopy").title("Shop"),
+
       ...S.documentTypeListItems().filter((listItem) => {
         return ![
           "aboutCopy",
           "homeCopy",
           "contactCopy",
+          "shopCopy",
+          "donateCopy",
+          "newsCopy",
+          "galleryCopy",
           "category",
           "siteSettings",
           "navMenu",

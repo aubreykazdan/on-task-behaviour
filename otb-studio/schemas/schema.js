@@ -15,6 +15,10 @@ import form from "./objects/form";
 import gallery from "./documents/gallery";
 import twi from "./objects/twi";
 import eventsList from "./documents/eventsList";
+import shopCopy from "./documents/shopCopy";
+import donateCopy from "./documents/donateCopy";
+import newsCopy from "./documents/newsCopy";
+import galleryCopy from "./documents/galleryCopy";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,6 +28,10 @@ export default createSchema({
     aboutCopy,
     homeCopy,
     contactCopy,
+    shopCopy,
+    donateCopy,
+    newsCopy,
+    galleryCopy,
     form,
     blockContent,
     siteSettings,

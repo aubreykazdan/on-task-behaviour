@@ -89,3 +89,17 @@ export const galleryQuery = `
  }
 }
 `;
+
+export const shopQuery = `
+*[_type == "shopCopy"][0]{
+  ...,
+  image{
+    "asset": asset->url,
+    crop,
+    hotspot,
+    "aspectRatio": asset->metadata.dimensions.aspectRatio,
+    "height": asset->metadata.dimensions.height,
+    "width": asset->metadata.dimensions.width,
+  },
+}
+`;

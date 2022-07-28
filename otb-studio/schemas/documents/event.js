@@ -41,6 +41,7 @@ export default {
       title: "Cost",
       name: "cost",
       type: "number",
+      description: "$",
     },
     {
       name: "image",
