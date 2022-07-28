@@ -9,7 +9,7 @@ export default function Contact({ data }) {
 
   return (
     <Layout data={data}>
-      <div className="space-y-4 border">
+      <div className="space-y-4">
         <p className="text-3xl">Send love letters to:</p>
         <p className="">Canada: 1124 College St, Toronto ON M6H 1B6</p>
         <p className="">US: PO Box 1153 Ogdensburg NY 13669</p>

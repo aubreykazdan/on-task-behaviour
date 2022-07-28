@@ -68,12 +68,6 @@ export default () =>
             .child(subCategoryList)
         ),
 
-      S.documentListItem()
-        .id("navMenu")
-        .schemaType("navMenu")
-        .title("Navigation Menu")
-        .icon(MdLink),
-
       S.divider(),
 
       S.listItem()
@@ -86,9 +80,15 @@ export default () =>
 
       S.divider(),
 
+      S.documentListItem()
+        .id("aboutCopy")
+        .schemaType("aboutCopy")
+        .title("About"),
+
       ...S.documentTypeListItems().filter((listItem) => {
         return ![
-          `category`,
+          "aboutCopy",
+          "category",
           "siteSettings",
           "navMenu",
           "cta",

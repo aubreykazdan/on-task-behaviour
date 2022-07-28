@@ -40,3 +40,7 @@ export const categoryOneQuery = `
   ...,
 }
 `;
+
+export const aboutQuery = `
+*[_type == "aboutCopy"][0]
+`;
