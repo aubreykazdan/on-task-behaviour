@@ -16,7 +16,10 @@ export default function Gallery({ data }) {
   const router = useRouter();
   const { galleryItems } = data;
   const { items } = galleryItems;
-  return (
+
+  return router.isFallback ? (
+    <p>Loading...</p>
+  ) : (
     <Layout data={data}>
       <div className="">
         <p className="text-3xl">{galleryItems.title}</p>

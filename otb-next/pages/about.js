@@ -17,7 +17,9 @@ export default function About({ data }) {
   const { aboutCopy } = data;
   const { content, title, image, alt } = aboutCopy;
 
-  return (
+  return router.isFallback ? (
+    <p>Loading...</p>
+  ) : (
     <Layout data={data}>
       <div className="flex flex-col lg:flex-row lg:space-x-4">
         <div className="mb-4 h-full w-full md:min-w-600">

@@ -16,7 +16,9 @@ export default function Contact({ data }) {
   const { contactCopy } = data;
   const { content, title } = contactCopy;
 
-  return (
+  return router.isFallback ? (
+    <p>Loading...</p>
+  ) : (
     <Layout data={data}>
       <div className="">
         <h3 className="text-3xl">{title}</h3>
