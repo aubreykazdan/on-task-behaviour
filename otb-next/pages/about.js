@@ -21,15 +21,13 @@ export default function About({ data }) {
     <p>Loading...</p>
   ) : (
     <Layout data={data}>
-      <div className="flex flex-col lg:flex-row lg:space-x-4">
-        <div className="mb-4 h-full w-full md:min-w-600">
+      <div className="flex flex-col lg:flex-row lg:justify-center lg:space-x-4">
+        <div className="mb-4 lg:min-w-600 max-w-full flex justify-center">
           <Img image={image} alt={alt} />
         </div>
         <div className="mb-4">
           <p className="text-3xl">{title}</p>
-          <div className="">
-            <Content blocks={content} />
-          </div>
+          <Content blocks={content} />
         </div>
       </div>
     </Layout>
