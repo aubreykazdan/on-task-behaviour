@@ -2,7 +2,7 @@ import { motion, useCycle } from "framer-motion";
 import { MenuToggle } from "./menuToggle";
 import { Navigation } from "./navigation";
 
-export function MobileMenu({ categories }) {
+export function MobileMenu({ categories, socials }) {
   const [isOpen, toggleOpen] = useCycle(false, true);
   return (
     <motion.nav
@@ -14,6 +14,7 @@ export function MobileMenu({ categories }) {
         isOpen={isOpen}
         toggleOpen={toggleOpen}
         categories={categories}
+        socials={socials}
       />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>

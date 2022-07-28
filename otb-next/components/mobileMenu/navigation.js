@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { RemoveScroll } from "react-remove-scroll";
+import { Instagram, TikTok } from "../icon";
 import { MenuItem } from "./menuItem";
 
 const variants = {
@@ -13,7 +14,7 @@ const variants = {
   },
 };
 
-export function Navigation({ isOpen, toggleOpen, categories }) {
+export function Navigation({ isOpen, toggleOpen, categories, socials }) {
   const variants = {
     open: {
       transition: { staggerChildren: 0.07, delayChildren: 0.1 },
@@ -24,6 +25,8 @@ export function Navigation({ isOpen, toggleOpen, categories }) {
       opacity: 0,
     },
   };
+
+  const { tiktok, instagram } = socials;
 
   return (
     isOpen && (
@@ -40,11 +43,14 @@ export function Navigation({ isOpen, toggleOpen, categories }) {
                   </MenuItem>
                 );
               })}
-
-            {/* <ul className="mt-10 flex flex-col items-end">
-              <p className="uppercase text-green mb-5">{t("follow-us")}</p>
-              <SiteSocials header />
-            </ul> */}
+            <ul className="flex justify-end">
+              <div className="mr-4 text-3xl">
+                <Instagram external={instagram} />
+              </div>
+              <div className="text-2xl flex items-center ">
+                <TikTok external={tiktok} />
+              </div>
+            </ul>
           </motion.ul>
         </div>
       </RemoveScroll>

@@ -1,8 +1,11 @@
 import Headroom from "react-headroom";
 import Navlink from "../navlink";
 import { MobileMenu } from "../mobileMenu";
+import { Instagram, TikTok } from "../icon";
 
-export default function Header({ categories }) {
+export default function Header({ categories, socials }) {
+  const { tiktok, instagram } = socials;
+
   return (
     <header className="mb-4">
       <Headroom>
@@ -22,9 +25,15 @@ export default function Header({ categories }) {
                   </li>
                 );
               })}
+            <div className="mr-4 text-2xl">
+              <Instagram external={instagram} />
+            </div>
+            <div className="text-xl ">
+              <TikTok external={tiktok} />
+            </div>
           </div>
           <div className="md:hidden">
-            <MobileMenu categories={categories} />
+            <MobileMenu categories={categories} socials={socials} />
           </div>
         </ul>
       </Headroom>

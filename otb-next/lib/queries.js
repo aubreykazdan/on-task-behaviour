@@ -8,11 +8,7 @@ export const settingsQuery = `
 `;
 
 export const socialsQuery = `
-*[_type == "socials"][0]{
-  twitter,
-  facebook,
-  youtube
-}
+*[_type == "socials"][0]
 `;
 
 export const navQuery = `

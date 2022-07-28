@@ -10,9 +10,9 @@ import Meta from "../components/meta";
 import Layout from "../components/layout";
 
 export default function Home({ data }) {
-  const { settings, categories } = data;
+  const { settings, categories, socials } = data;
   return (
-    <Layout categories={categories} settings={settings}>
+    <Layout data={data}>
       <p className="">The quick brown fox jumped over the lazy dog</p>
     </Layout>
   );
