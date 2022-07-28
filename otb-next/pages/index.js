@@ -16,7 +16,7 @@ export default function Home({ data }) {
   const { content, title, image, alt } = homeCopy;
   return (
     <Layout data={data}>
-      <div className="flex flex-col lg:flex-row lg:space-x-4 lg:justify-center">
+      <div className="flex flex-col lg:flex-row lg:space-x-4 lg:justify-center ">
         <div className="mb-4 lg:min-w-600 max-w-full flex justify-center">
           <Img image={image} alt={alt} />
         </div>

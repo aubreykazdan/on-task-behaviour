@@ -7,7 +7,7 @@ export default function Header({ categories, socials }) {
   const { tiktok, instagram } = socials;
 
   return (
-    <header className="mb-4">
+    <header className="mb-4 uppercase">
       <Headroom>
         <ul className="flex justify-between items-center container mx-auto p-4 bg-white">
           <Navlink internal="/">
