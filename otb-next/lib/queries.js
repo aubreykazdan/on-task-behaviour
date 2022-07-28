@@ -136,6 +136,20 @@ export const eventsCopyQuery = `
 }
 `;
 
+export const newsCopyQuery = `
+*[_type == "newsCopy"][0]{
+  ...,
+  image{
+    "asset": asset->url,
+    crop,
+    hotspot,
+    "aspectRatio": asset->metadata.dimensions.aspectRatio,
+    "height": asset->metadata.dimensions.height,
+    "width": asset->metadata.dimensions.width,
+  },
+}
+`;
+
 export const eventsQuery = `
 *[_type == "eventsList"][0]
 `;
