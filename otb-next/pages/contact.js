@@ -7,9 +7,8 @@ import { categoriesQuery, settingsQuery, socialsQuery } from "../lib/queries";
 export default function Contact({ data }) {
   const router = useRouter();
 
-  const { settings, categories } = data;
   return (
-    <Layout categories={categories} settings={settings}>
+    <Layout data={data}>
       <div className="space-y-4 border">
         <p className="text-3xl">Send love letters to:</p>
         <p className="">Canada: 1124 College St, Toronto ON M6H 1B6</p>

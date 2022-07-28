@@ -7,9 +7,8 @@ import { categoriesQuery, settingsQuery, socialsQuery } from "../lib/queries";
 export default function News({ data }) {
   const router = useRouter();
 
-  const { settings, categories } = data;
   return (
-    <Layout categories={categories} settings={settings}>
+    <Layout data={data}>
       <div className="">
         <p className="text-3xl">News</p>
       </div>

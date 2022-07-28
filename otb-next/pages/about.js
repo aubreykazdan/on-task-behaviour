@@ -7,9 +7,9 @@ import { categoriesQuery, settingsQuery, socialsQuery } from "../lib/queries";
 export default function About({ data }) {
   const router = useRouter();
 
-  const { settings, categories } = data;
+  const { settings, categories, socials } = data;
   return (
-    <Layout categories={categories} settings={settings}>
+    <Layout data={data}>
       <div className="">
         <p className="text-3xl">About</p>
       </div>
