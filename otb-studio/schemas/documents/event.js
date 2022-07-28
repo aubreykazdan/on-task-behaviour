@@ -4,7 +4,7 @@ export default {
   type: "document",
   fields: [
     {
-      title: "Start Date",
+      title: "Date",
       name: "startDate",
       type: "datetime",
       options: {
@@ -14,26 +14,36 @@ export default {
         calendarTodayLabel: "Today",
       },
     },
-    {
-      title: "End Date",
-      name: "endDate",
-      type: "datetime",
-      options: {
-        dateFormat: "YYYY-MM-DD",
-        timeFormat: "HH:mm",
-        timeStep: 15,
-        calendarTodayLabel: "Today",
-      },
-    },
+    // {
+    //   title: "End Date",
+    //   name: "endDate",
+    //   type: "datetime",
+    //   options: {
+    //     dateFormat: "YYYY-MM-DD",
+    //     timeFormat: "HH:mm",
+    //     timeStep: 15,
+    //     calendarTodayLabel: "Today",
+    //   },
+    // },
     {
       title: "Event Name *",
-      name: "eventName",
+      name: "title",
       description: "The main title for the event listing.",
       type: "string",
     },
     {
-      name: "eventImage",
-      title: "Event Image",
+      title: "Description",
+      name: "description",
+      type: "string",
+    },
+    {
+      title: "Cost",
+      name: "cost",
+      type: "number",
+    },
+    {
+      name: "image",
+      title: "Image",
       type: "image",
       description: "Upload the largest scale image for the event",
       options: {
@@ -41,7 +51,7 @@ export default {
       },
     },
     {
-      name: "imageAlt",
+      name: "alt",
       title: "Image Alt",
       type: "string",
       description: "Description of image for accessibility",
@@ -49,20 +59,6 @@ export default {
     {
       title: "Event Ticket URL",
       name: "ticketURL",
-      type: "url",
-    },
-    {
-      title: "Ticket Status",
-      name: "ticketStatus",
-      type: "string",
-      options: {
-        list: ["Buy Tickets", "Sold Out", "Presale Sold Out"],
-        layout: "radio",
-      },
-    },
-    {
-      title: "Event Facebook URL",
-      name: "eventFacebookURL",
       type: "url",
     },
   ],
@@ -85,9 +81,9 @@ export default {
   ],
   preview: {
     select: {
-      title: "eventName",
+      title: "title",
       subtitle: "startDate",
-      media: "eventImage",
+      media: "ismage",
     },
   },
 };
