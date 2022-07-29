@@ -11,6 +11,7 @@ import {
 } from "../../lib/queries";
 import Content from "../../components/content";
 import Img from "../../components/img";
+import Container from "../../components/container";
 
 export default function Events({ data }) {
   const router = useRouter();
@@ -30,7 +31,11 @@ export default function Events({ data }) {
           <Content blocks={content} />
         </div>
       </div>
-      <div className="border py-10"></div>
+      <div className="border">
+        <Container event>
+          <h2></h2>
+        </Container>
+      </div>
       {/* <div>
         {items &&
           items.map((item) => {
