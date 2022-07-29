@@ -3,17 +3,6 @@ import { RemoveScroll } from "react-remove-scroll";
 import { Instagram, TikTok } from "../icon";
 import { MenuItem } from "./menuItem";
 
-const variants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-    opacity: 1,
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-    opacity: 0,
-  },
-};
-
 export function Navigation({ isOpen, toggleOpen, categories, socials }) {
   const variants = {
     open: {
@@ -44,12 +33,24 @@ export function Navigation({ isOpen, toggleOpen, categories, socials }) {
                 );
               })}
             <ul className="flex justify-end">
-              <div className="mr-4 text-3xl">
-                <Instagram external={instagram} />
-              </div>
-              <div className="text-2xl flex items-center ">
-                <TikTok external={tiktok} />
-              </div>
+              <motion.li variants={variants}>
+                <motion.div
+                  whileHover={{ x: -5 }}
+                  whileTap={{ x: 5 }}
+                  className="mr-4 text-3xl"
+                >
+                  <Instagram external={instagram} />
+                </motion.div>
+              </motion.li>
+              <motion.li variants={variants}>
+                <motion.div
+                  whileHover={{ x: -5 }}
+                  whileTap={{ x: 5 }}
+                  className="text-2xl flex items-center "
+                >
+                  <TikTok external={tiktok} />
+                </motion.div>
+              </motion.li>
             </ul>
           </motion.ul>
         </div>
