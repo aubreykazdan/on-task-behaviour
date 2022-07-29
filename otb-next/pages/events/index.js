@@ -9,36 +9,31 @@ import {
   settingsQuery,
   socialsQuery,
 } from "../../lib/queries";
-import Container from "../../components/container";
 import TextWithIllustration from "../../components/twi";
+import EventImg from "../../components/eventImg";
+import InfoContainer from "../../components/infoContainer";
 
 export default function Events({ data }) {
   const router = useRouter();
-  const { eventsCopy, events } = data;
+  const { eventsCopy, eventsList } = data;
+  const { events } = eventsList;
 
   return router.isFallback ? (
     <p>Loading...</p>
   ) : (
     <Layout data={data}>
       <TextWithIllustration copy={eventsCopy} />
-      <div className="border">
-        <Container event>
-          <h2></h2>
-        </Container>
-      </div>
-      {/* <div>
-        {items &&
-          items.map((item) => {
-            const { _key, alt, content, image, title } = item;
-            return (
-              <div key={_key}>
-                <p>{title}</p>
-                <Img image={image} alt={alt} />
-                <Content blocks={content} />
-              </div>
-            );
-          })}
-      </div> */}
+      <div className="border-b mb-4"></div>
+      {events &&
+        events.map((item) => {
+          const { _key, image, alt } = item;
+          return (
+            <div key={_key} className="grid grid-cols-1 lg:grid-cols-2 mb-4">
+              <InfoContainer event={item} />
+              <EventImg image={image} alt={alt} />
+            </div>
+          );
+        })}
     </Layout>
   );
 }
@@ -48,12 +43,12 @@ export async function getServerSideProps({ params, preview = false }) {
   const settings = await getClient(preview).fetch(settingsQuery);
   const socials = await getClient(preview).fetch(socialsQuery);
   const eventsCopy = await getClient(preview).fetch(eventsCopyQuery);
-  const events = await getClient(preview).fetch(eventsQuery);
+  const eventsList = await getClient(preview).fetch(eventsQuery);
   return {
     props: {
       preview,
       data: {
-        events,
+        eventsList,
         eventsCopy,
         settings,
         categories,
