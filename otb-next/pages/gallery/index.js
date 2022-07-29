@@ -23,7 +23,9 @@ export default function Gallery({ data }) {
     <p>Loading...</p>
   ) : (
     <Layout data={data}>
-      <TextWithIllustration copy={galleryCopy} />
+      <div className="">
+        <TextWithIllustration copy={galleryCopy} />
+      </div>
       <div className="border-b mb-4"></div>
       <div>
         {items &&

@@ -21,7 +21,7 @@ export default function Contact({ data }) {
   ) : (
     <Layout data={data}>
       <div className="">
-        <h3 className="text-3xl">{title}</h3>
+        <h3 className="text-3xl text-purple mb-4">{title}</h3>
         <Content blocks={content} />
       </div>
     </Layout>
