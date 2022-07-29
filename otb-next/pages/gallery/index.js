@@ -9,10 +9,9 @@ import {
   settingsQuery,
   socialsQuery,
 } from "../../lib/queries";
-import Content from "../../components/content";
-import Img from "../../components/img";
 import TextWithIllustration from "../../components/twi";
-import Container from "../../components/container";
+import InfoContainer from "../../components/infoContainer";
+import EventImg from "../../components/eventImg";
 
 export default function Gallery({ data }) {
   const router = useRouter();
@@ -25,18 +24,15 @@ export default function Gallery({ data }) {
   ) : (
     <Layout data={data}>
       <TextWithIllustration copy={galleryCopy} />
-      <div className="border">
-        <Container event></Container>
-      </div>
+      <div className="border-b mb-4"></div>
       <div>
         {items &&
           items.map((item) => {
-            const { _key, alt, content, image, title } = item;
+            const { _key, alt, image } = item;
             return (
-              <div key={_key}>
-                <p>{title}</p>
-                <Img image={image} alt={alt} />
-                <Content blocks={content} />
+              <div key={_key} className="grid grid-cols-1 lg:grid-cols-2 mb-4">
+                <InfoContainer item={item} />
+                <EventImg image={image} alt={alt} />
               </div>
             );
           })}

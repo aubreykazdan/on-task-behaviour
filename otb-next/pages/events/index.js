@@ -29,7 +29,7 @@ export default function Events({ data }) {
           const { _key, image, alt } = item;
           return (
             <div key={_key} className="grid grid-cols-1 lg:grid-cols-2 mb-4">
-              <InfoContainer event={item} />
+              <InfoContainer item={item} />
               <EventImg image={image} alt={alt} />
             </div>
           );
