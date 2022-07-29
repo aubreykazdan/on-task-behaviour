@@ -11,6 +11,8 @@ import {
 } from "../../lib/queries";
 import Content from "../../components/content";
 import Img from "../../components/img";
+import TextWithIllustration from "../../components/twi";
+import Container from "../../components/container";
 
 export default function Gallery({ data }) {
   const router = useRouter();
@@ -22,16 +24,10 @@ export default function Gallery({ data }) {
     <p>Loading...</p>
   ) : (
     <Layout data={data}>
-      <div className="flex flex-col lg:flex-row lg:justify-center lg:space-x-4">
-        <div className="mb-4 lg:min-w-600 max-w-full flex justify-center">
-          <Img image={image} alt={alt} />
-        </div>
-        <div className="mb-4">
-          <p className="text-3xl uppercase">{title}</p>
-          <Content blocks={content} />
-        </div>
+      <TextWithIllustration copy={galleryCopy} />
+      <div className="border">
+        <Container event></Container>
       </div>
-      <div className="border py-10"></div>
       <div>
         {items &&
           items.map((item) => {

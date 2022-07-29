@@ -8,28 +8,18 @@ import {
   settingsQuery,
   socialsQuery,
 } from "../../lib/queries";
-import Img from "../../components/img";
-import Content from "../../components/content";
+import TextWithIllustration from "../../components/twi";
 
 export default function News({ data }) {
   const router = useRouter();
 
   const { newsCopy } = data;
-  const { content, title, image, alt } = newsCopy;
 
   return router.isFallback ? (
     <p>Loading...</p>
   ) : (
     <Layout data={data}>
-      <div className="flex flex-col lg:flex-row lg:justify-center lg:space-x-4">
-        <div className="mb-4 lg:min-w-600 max-w-full flex justify-center">
-          <Img image={image} alt={alt} />
-        </div>
-        <div className="mb-4">
-          <p className="text-3xl uppercase">{title}</p>
-          <Content blocks={content} />
-        </div>
-      </div>
+      <TextWithIllustration copy={newsCopy} />
     </Layout>
   );
 }
