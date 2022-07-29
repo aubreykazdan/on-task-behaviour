@@ -21,9 +21,11 @@ module.exports = {
     extend: {
       maxWidth: {
         600: 600,
+        1000: 1000,
       },
       maxHeight: {
         600: 600,
+        1000: 1000,
       },
       minWidth: {
         500: 500,
