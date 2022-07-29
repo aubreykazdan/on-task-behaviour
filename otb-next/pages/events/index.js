@@ -9,8 +9,6 @@ import {
   settingsQuery,
   socialsQuery,
 } from "../../lib/queries";
-import Content from "../../components/content";
-import Img from "../../components/img";
 import Container from "../../components/container";
 import TextWithIllustration from "../../components/twi";
 

@@ -8,8 +8,6 @@ import {
   shopQuery,
   socialsQuery,
 } from "../../lib/queries";
-import Img from "../../components/img";
-import Content from "../../components/content";
 import TextWithIllustration from "../../components/twi";
 
 export default function Shop({ data }) {

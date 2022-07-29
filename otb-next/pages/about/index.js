@@ -8,8 +8,6 @@ import {
   settingsQuery,
   socialsQuery,
 } from "../../lib/queries";
-import Content from "../../components/content";
-import Img from "../../components/img";
 import TextWithIllustration from "../../components/twi";
 
 export default function About({ data }) {
