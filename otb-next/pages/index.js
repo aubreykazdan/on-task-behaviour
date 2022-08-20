@@ -8,7 +8,7 @@ import {
 } from "../lib/queries";
 
 import Layout from "../components/layout";
-import TextWithIllustration from "../components/twi";
+import TextWithIllustration from "@/components/sections/twi";
 
 export default function Home({ data }) {
   const { homeCopy } = data;

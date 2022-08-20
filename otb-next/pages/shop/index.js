@@ -8,7 +8,7 @@ import {
   shopQuery,
   socialsQuery,
 } from "../../lib/queries";
-import TextWithIllustration from "../../components/twi";
+import TextWithIllustration from "@/components/sections/twi";
 
 export default function Shop({ data }) {
   const router = useRouter();

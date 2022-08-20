@@ -1,5 +1,5 @@
-import Content from "./content";
-import Img from "./img";
+import Content from "../content";
+import Img from "../img";
 
 export default function TextWithIllustration({ copy }) {
   const { content, title, image, alt } = copy;

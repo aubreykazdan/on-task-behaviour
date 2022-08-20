@@ -9,9 +9,9 @@ import {
   settingsQuery,
   socialsQuery,
 } from "../../lib/queries";
-import TextWithIllustration from "../../components/twi";
-import EventImg from "../../components/eventImg";
-import InfoContainer from "../../components/infoContainer";
+import EventImg from "@/components/eventImg";
+import InfoContainer from "@/components/infoContainer";
+import TextWithIllustration from "@/components/sections/twi";
 
 export default function Events({ data }) {
   const router = useRouter();
