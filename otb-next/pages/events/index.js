@@ -12,6 +12,7 @@ import {
 import EventImg from "@/components/eventImg";
 import InfoContainer from "@/components/infoContainer";
 import TextWithIllustration from "@/components/sections/twi";
+import Section from "@/components/section";
 
 export default function Events({ data }) {
   const router = useRouter();
@@ -28,10 +29,12 @@ export default function Events({ data }) {
         events.map((item) => {
           const { _key, image, alt } = item;
           return (
-            <div key={_key} className="grid grid-cols-1 lg:grid-cols-2 mb-4">
-              <InfoContainer item={item} />
-              <EventImg image={image} alt={alt} />
-            </div>
+            <Section container key={_key}>
+              <div className="grid grid-cols-1 lg:grid-cols-2 mb-4">
+                <InfoContainer item={item} />
+                <EventImg image={image} alt={alt} />
+              </div>
+            </Section>
           );
         })}
     </Layout>
