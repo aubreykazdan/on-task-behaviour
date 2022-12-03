@@ -1,14 +1,13 @@
 import Meta from "./meta";
 import Footer from "./sections/footer";
-import NewHeader from "./sections/newHeader";
+import Header from "./sections/header";
 
 export default function Layout({ children, data }) {
-  const { categories, settings, socials } = data;
+  const { settings, socials } = data;
   return (
     <div className="">
       <Meta settings={settings} />
-      {/* <Header categories={categories} socials={socials} /> */}
-      <NewHeader />
+      <Header />
       <main className="flex flex-col min-h-screen container mx-auto px-4">
         {children}
       </main>
