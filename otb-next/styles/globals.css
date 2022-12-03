@@ -1,26 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
   font-family: "Montserrat", sans-serif;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
 h1 {
-  @apply mb-4 md:mb-6 text-4xl lg:text-5xl font-bold leading-normal tracking-normal;
+  @apply mb-4 md:mb-6 text-4xl lg:text-5xl font-bold leading-normal tracking-normal text-accent;
 }
 
 h2 {
-  @apply mb-4 md:mb-6 text-3xl lg:text-4xl font-semibold leading-normal tracking-normal;
+  @apply mb-4 md:mb-6 text-3xl lg:text-4xl font-semibold leading-normal tracking-normal text-accent;
 }
 h3 {
-  @apply mb-4 md:mb-6 text-2xl lg:text-3xl font-normal  leading-normal tracking-normal;
+  @apply mb-4 md:mb-6 text-2xl lg:text-3xl font-normal  leading-normal tracking-normal text-accent;
 }
 h4 {
-  @apply mb-4 md:mb-6 text-xl lg:text-2xl font-normal leading-normal tracking-normal;
+  @apply mb-4 md:mb-6 text-xl lg:text-2xl font-normal leading-normal tracking-normal text-accent;
 }
 p {
-  @apply mb-4 md:mb-6 text-sm lg:text-base font-normal leading-normal tracking-normal;
+  @apply mb-4 md:mb-6 text-sm lg:text-base font-normal leading-normal tracking-normal text-accent;
+}
+
+.btn {
+  @apply w-max text-white inline-flex items-center shadow-sm transition
+        font-medium bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 
+        focus:ring-offset-2 focus:ring-accent;
+}
+
+.btn-sm {
+  @apply px-3 py-2 text-sm leading-4 rounded-md;
+}
+
+.btn-md {
+  @apply px-4 py-2 text-sm rounded-md;
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-base rounded-md;
+}
+
+.btn-xl {
+  @apply px-8 py-4 text-base md:px-6 md:py-3 md:text-lg rounded-xl;
 }
