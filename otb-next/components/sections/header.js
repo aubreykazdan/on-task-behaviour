@@ -33,7 +33,7 @@ export default function Header({ categories, socials }) {
               <motion.h1
                 whileHover={{ x: -5 }}
                 whileTap={{ x: 5 }}
-                className="text-4xl text-purple uppercase whitespace-nowrap"
+                className="text-4xl text-accent uppercase whitespace-nowrap"
               >
                 On Task
               </motion.h1>

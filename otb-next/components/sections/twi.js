@@ -7,7 +7,7 @@ export default function TextWithIllustration({ copy }) {
   return (
     <Section container>
       <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="mb-8 lg:mb-4 lg:w-full flex justify-center lg:justify-start">
+        <div className="mb-8 lg:mb-4 lg:w-full flex justify-center lg:justify-start -z-10">
           <Img image={image} alt={alt} />
         </div>
 

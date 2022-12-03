@@ -1,13 +1,15 @@
 import Link from "next/link";
 
-export default function Navlink({ internal, external, children }) {
+export default function NavLink({ internal, external, children }) {
   return external ? (
-    <a rel="noreferrer" href={external} target="_blank">
+    <a className="navLink" rel="noreferrer" href={external} target="_blank">
       {children}
     </a>
   ) : (
     <Link href={internal}>
-      <a rel="noreferrer">{children}</a>
+      <a className="navLink" rel="noreferrer">
+        {children}
+      </a>
     </Link>
   );
 }
