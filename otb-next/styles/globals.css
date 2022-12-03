@@ -2,16 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html,
-  body {
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 0;
-    line-height: 1.2;
-    font-size: 18px;
-    margin: 0px;
-    padding: 0px;
-  }
+* {
+  font-family: "Montserrat", sans-serif;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+h1 {
+  @apply mb-4 md:mb-6 text-4xl lg:text-5xl font-bold leading-normal tracking-normal;
+}
+
+h2 {
+  @apply mb-4 md:mb-6 text-3xl lg:text-4xl font-semibold leading-normal tracking-normal;
+}
+h3 {
+  @apply mb-4 md:mb-6 text-2xl lg:text-3xl font-normal  leading-normal tracking-normal;
+}
+h4 {
+  @apply mb-4 md:mb-6 text-xl lg:text-2xl font-normal leading-normal tracking-normal;
+}
+p {
+  @apply mb-4 md:mb-6 text-sm lg:text-base font-normal leading-normal tracking-normal;
+}
