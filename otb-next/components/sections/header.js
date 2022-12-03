@@ -37,7 +37,7 @@ function classNames(...classes) {
 
 export default function Header({}) {
   return (
-    <Popover className="relative bg-white">
+    <Popover className="relative bg-white shadow-md">
       <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div className="flex cursor-pointer">
           <span className="sr-only">On Task Behaviour</span>

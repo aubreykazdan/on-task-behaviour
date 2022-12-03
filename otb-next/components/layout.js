@@ -8,9 +8,7 @@ export default function Layout({ children, data }) {
     <div className="">
       <Meta settings={settings} />
       <Header />
-      <main className="flex flex-col min-h-screen container mx-auto px-4">
-        {children}
-      </main>
+      <main className="min-h-screen">{children}</main>
       <Footer settings={settings} />
     </div>
   );
