@@ -27,7 +27,7 @@ p {
 .btn {
   @apply w-max text-white inline-flex items-center shadow-sm transition
         font-medium bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 
-        focus:ring-offset-2 focus:ring-accent;
+        focus:ring-offset-2 focus:ring-accent cursor-pointer;
 }
 
 .btn-sm {

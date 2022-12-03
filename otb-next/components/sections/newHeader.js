@@ -10,8 +10,8 @@ import {
   Squares2X2Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import NavLink from "../navlink";
+import Link from "next/link";
 
 const headerLinks = [
   {
@@ -97,20 +97,9 @@ export default function NewHeader({}) {
               </NavLink>
             ))}
           </Popover.Group>
-          <div className="flex items-center md:ml-12">
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Sign in
-            </a>
-            <a
-              href="#"
-              className="ml-8 inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-            >
-              Sign up
-            </a>
-          </div>
+          <Link href="/donate">
+            <div className="btn btn-lg">Donate</div>
+          </Link>
         </div>
       </div>
 
@@ -146,69 +135,16 @@ export default function NewHeader({}) {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-6">
-                  {/* {solutions.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50"
-                    >
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white">
-                        <item.icon className="h-6 w-6" aria-hidden="true" />
-                      </div>
-                      <div className="ml-4 text-base font-medium text-gray-900">
-                        {item.name}
-                      </div>
-                    </a>
-                  ))} */}
+                  {headerLinks.map((item) => (
+                    <NavLink key={item.name} internal={item.href}>
+                      {item.name}
+                    </NavLink>
+                  ))}
                 </nav>
               </div>
             </div>
             <div className="py-6 px-5">
-              <div className="grid grid-cols-2 gap-4">
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Pricing
-                </a>
-
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Docs
-                </a>
-
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Enterprise
-                </a>
-                {resources.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-              <div className="mt-6">
-                <a
-                  href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                >
-                  Sign up
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{" "}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
-              </div>
+              <Link href="/donate">Donate</Link>
             </div>
           </div>
         </Popover.Panel>
