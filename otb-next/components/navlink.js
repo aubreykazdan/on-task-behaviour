@@ -7,9 +7,7 @@ export default function NavLink({ internal, external, children }) {
     </a>
   ) : (
     <Link href={internal}>
-      <a className="navLink" rel="noreferrer">
-        {children}
-      </a>
+      <p className="navLink mb-0">{children}</p>
     </Link>
   );
 }

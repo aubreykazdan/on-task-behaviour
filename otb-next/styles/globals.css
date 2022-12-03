@@ -47,5 +47,5 @@ p {
 }
 
 .navLink {
-  @apply text-sm lg:text-base font-normal leading-normal tracking-normal text-accent  hover:text-accent-hover focus:text-accent-hover focus:underline hover:underline;
+  @apply text-sm lg:text-base font-normal leading-normal tracking-normal text-accent  hover:text-accent-hover focus:text-accent-hover focus:underline hover:underline cursor-pointer;
 }

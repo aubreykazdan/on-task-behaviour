@@ -1,15 +1,6 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartBarIcon,
-  CursorArrowRaysIcon,
-  DocumentChartBarIcon,
-  ShieldCheckIcon,
-  Squares2X2Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import NavLink from "../navlink";
 import Link from "next/link";
 
@@ -39,31 +30,6 @@ const headerLinks = [
     href: "/gallery",
   },
 ];
-const resources = [
-  {
-    name: "Help Center",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
-    href: "#",
-  },
-  {
-    name: "Guides",
-    description:
-      "Learn how to maximize our platform to get the most out of it.",
-    href: "#",
-  },
-  {
-    name: "Events",
-    description:
-      "See what meet-ups and other events we might be planning near you.",
-    href: "#",
-  },
-  {
-    name: "Security",
-    description: "Understand how we take your privacy seriously.",
-    href: "#",
-  },
-];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -73,15 +39,15 @@ export default function NewHeader({}) {
   return (
     <Popover className="relative bg-white">
       <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
-        <div>
-          <a href="#" className="flex">
-            <span className="sr-only">Your Company</span>
+        <div className="flex cursor-pointer">
+          <span className="sr-only">On Task Behaviour</span>
+          <Link href="/">
             <img
-              className="h-8 w-auto sm:h-10"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt=""
+              className="h-10 w-auto sm:h-16"
+              src="/assets/heart.png"
+              alt="heart"
             />
-          </a>
+          </Link>
         </div>
         <div className="-my-2 -mr-2 md:hidden">
           <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -119,12 +85,14 @@ export default function NewHeader({}) {
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
-                <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                  />
+                <div className="cursor-pointer">
+                  <Link href="/">
+                    <img
+                      className="h-12 w-auto"
+                      src="/assets/heart.png"
+                      alt="heart"
+                    />
+                  </Link>
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -143,7 +111,7 @@ export default function NewHeader({}) {
                 </nav>
               </div>
             </div>
-            <div className="py-6 px-5">
+            <div className="py-6 px-5 text-sm">
               <Link href="/donate">Donate</Link>
             </div>
           </div>
