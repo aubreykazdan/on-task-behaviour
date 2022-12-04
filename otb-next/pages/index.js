@@ -15,7 +15,7 @@ export default function Home({ data }) {
   return (
     <Layout data={data}>
       {/* <TextWithIllustration copy={homeCopy} /> */}
-      <main className="lg:relative bg-gray-50">
+      <main className="lg:relative">
         <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-48 lg:text-left">
           <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
             <h1 className="">
@@ -29,7 +29,7 @@ export default function Home({ data }) {
             </p>
           </div>
         </div>
-        <div className="relative h-64 w-full sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
+        <div className="relative h-80 w-full sm:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
           <img
             className="absolute inset-0 h-full w-full object-cover object-right"
             src="/assets/charlotte.png"

@@ -6,10 +6,6 @@ import Link from "next/link";
 
 const headerLinks = [
   {
-    name: "Contact",
-    href: "/contact",
-  },
-  {
     name: "About",
     href: "/about",
   },
@@ -28,6 +24,10 @@ const headerLinks = [
   {
     name: "Gallery",
     href: "/gallery",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
   },
 ];
 
