@@ -78,7 +78,15 @@ export default function Footer() {
         </div>
         <p className="m text-center text-base text-gray-400">
           &copy; {new Date().getFullYear()} {""} On Task, Inc. All rights
-          reserved.
+          reserved. - Designed by{" "}
+          <a
+            href="https://aubreykazdan.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="underline hover:text-accent"
+          >
+            Aubrey Kazdan
+          </a>
         </p>
       </div>
     </footer>
