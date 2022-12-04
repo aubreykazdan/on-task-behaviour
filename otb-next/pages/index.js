@@ -9,13 +9,13 @@ import {
 
 import Layout from "../components/layout";
 import TextWithIllustration from "@/components/sections/twi";
+import Container from "@/components/container";
+import Link from "next/link";
 
 export default function Home({ data }) {
-  const { homeCopy } = data;
   return (
     <Layout data={data}>
-      {/* <TextWithIllustration copy={homeCopy} /> */}
-      <main className="lg:relative">
+      <section className="lg:relative">
         <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-48 lg:text-left">
           <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
             <h1 className="">
@@ -36,7 +36,35 @@ export default function Home({ data }) {
             alt=""
           />
         </div>
-      </main>
+      </section>
+      {/* Featured section */}
+      <section>
+        <Container>
+          <div className="relative overflow-hidden rounded-lg">
+            <div className="absolute inset-0">
+              <img
+                src="/assets/blue-landscape.png"
+                alt=""
+                className="h-full w-full object-cover object-center"
+              />
+            </div>
+            <div className="relative bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-40 sm:px-12 lg:px-16">
+              <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
+                <h2 id="social-impact-heading" className=" text-white">
+                  <span className="block sm:inline">Check out </span>
+                  <span className="block sm:inline">our events</span>
+                </h2>
+                <p className="text-white">
+                  Check out our schedule and see what's in store
+                </p>
+                <Link href="/events">
+                  <div className="btn-light btn-lg">All Events</div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
     </Layout>
   );
 }
@@ -45,15 +73,11 @@ export async function getServerSideProps({ preview = false }) {
   const settings = await getClient(preview).fetch(settingsQuery);
   const navigation = await getClient(preview).fetch(navQuery);
   const socials = await getClient(preview).fetch(socialsQuery);
-  const categories = await getClient(preview).fetch(categoriesQuery);
-  const homeCopy = await getClient(preview).fetch(homeQuery);
 
   return {
     props: {
       preview,
       data: {
-        homeCopy,
-        categories,
         settings,
         navigation,
         socials,

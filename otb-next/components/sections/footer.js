@@ -47,7 +47,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="border">
+    <footer className="border-t">
       <div className="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
         <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center mb-4 md:mb-6"
