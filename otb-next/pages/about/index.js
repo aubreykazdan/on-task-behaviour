@@ -10,6 +10,7 @@ import {
 } from "../../lib/queries";
 import TextWithIllustration from "@/components/sections/twi";
 import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
+import ContentSplitImage from "@/components/layouts/content/contentSplitImage";
 
 export default function About({ data }) {
   const router = useRouter();
@@ -21,6 +22,7 @@ export default function About({ data }) {
   ) : (
     <Layout data={data}>
       <HeaderBrandedImage title="About Us" />
+      <ContentSplitImage />
       {/* <TextWithIllustration copy={aboutCopy} /> */}
     </Layout>
   );

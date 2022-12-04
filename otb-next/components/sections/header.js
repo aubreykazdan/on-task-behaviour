@@ -37,13 +37,13 @@ function classNames(...classes) {
 
 export default function Header({}) {
   return (
-    <Popover className="relative bg-white shadow-md">
+    <Popover className="relative bg-white shadow-md z-50">
       <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div className="flex cursor-pointer">
           <span className="sr-only">On Task Behaviour</span>
           <Link href="/">
             <img
-              className="h-10 w-auto sm:h-16"
+              className="h-10 w-auto sm:h-16 rounded-full"
               src="/assets/heart.png"
               alt="heart"
             />
@@ -88,7 +88,7 @@ export default function Header({}) {
                 <div className="cursor-pointer">
                   <Link href="/">
                     <img
-                      className="h-12 w-auto"
+                      className="h-12 w-auto rounded-full"
                       src="/assets/heart.png"
                       alt="heart"
                     />
