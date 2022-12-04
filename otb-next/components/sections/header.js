@@ -43,8 +43,8 @@ export default function Header({}) {
           <span className="sr-only">On Task Behaviour</span>
           <Link href="/">
             <img
-              className="h-10 w-auto sm:h-16 rounded-full"
-              src="/assets/heart.png"
+              className="h-16 w-auto rounded-full"
+              src="/assets/pug-square.jpeg"
               alt="heart"
             />
           </Link>
@@ -88,8 +88,8 @@ export default function Header({}) {
                 <div className="cursor-pointer">
                   <Link href="/">
                     <img
-                      className="h-12 w-auto rounded-full"
-                      src="/assets/heart.png"
+                      className="h-16 w-auto rounded-full"
+                      src="/assets/pug-square.jpeg"
                       alt="heart"
                     />
                   </Link>
