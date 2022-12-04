@@ -1,17 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/typography'),
-    ],
-  }
-  ```
-*/
 export default function ContentSplitImage({}) {
   return (
     <div className="relative bg-white mt-4 md:mt-0">
@@ -19,7 +5,7 @@ export default function ContentSplitImage({}) {
         <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
           <img
             className="h-56 w-full object-cover md:object-right lg:absolute lg:h-full"
-            src="/assets/storefront-2.png"
+            src="/assets/pug.jpeg"
             alt=""
           />
         </div>
