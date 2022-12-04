@@ -1,11 +1,5 @@
 import { getClient } from "../lib/sanity.server";
-import {
-  categoriesQuery,
-  homeQuery,
-  navQuery,
-  settingsQuery,
-  socialsQuery,
-} from "../lib/queries";
+import { settingsQuery, socialsQuery } from "../lib/queries";
 
 import Layout from "../components/layout";
 import Container from "@/components/container";
@@ -70,7 +64,6 @@ export default function Home({ data }) {
 
 export async function getServerSideProps({ preview = false }) {
   const settings = await getClient(preview).fetch(settingsQuery);
-  const navigation = await getClient(preview).fetch(navQuery);
   const socials = await getClient(preview).fetch(socialsQuery);
 
   return {
@@ -78,8 +71,6 @@ export async function getServerSideProps({ preview = false }) {
       preview,
       data: {
         settings,
-        navigation,
-        socials,
       },
     },
   };
