@@ -9,6 +9,7 @@ import {
   socialsQuery,
 } from "../../lib/queries";
 import TextWithIllustration from "@/components/sections/twi";
+import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
 
 export default function About({ data }) {
   const router = useRouter();
@@ -19,7 +20,8 @@ export default function About({ data }) {
     <p>Loading...</p>
   ) : (
     <Layout data={data}>
-      <TextWithIllustration copy={aboutCopy} />
+      <HeaderBrandedImage title="About Us" />
+      {/* <TextWithIllustration copy={aboutCopy} /> */}
     </Layout>
   );
 }

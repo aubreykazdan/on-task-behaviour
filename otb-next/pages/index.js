@@ -8,7 +8,6 @@ import {
 } from "../lib/queries";
 
 import Layout from "../components/layout";
-import TextWithIllustration from "@/components/sections/twi";
 import Container from "@/components/container";
 import Link from "next/link";
 
