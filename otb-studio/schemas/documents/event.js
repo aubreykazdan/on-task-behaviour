@@ -14,17 +14,6 @@ export default {
         calendarTodayLabel: "Today",
       },
     },
-    // {
-    //   title: "End Date",
-    //   name: "endDate",
-    //   type: "datetime",
-    //   options: {
-    //     dateFormat: "YYYY-MM-DD",
-    //     timeFormat: "HH:mm",
-    //     timeStep: 15,
-    //     calendarTodayLabel: "Today",
-    //   },
-    // },
     {
       title: "Event Name *",
       name: "title",
@@ -36,12 +25,6 @@ export default {
       name: "content",
       type: "array",
       of: [{ type: "block" }],
-    },
-    {
-      title: "Cost",
-      name: "cost",
-      type: "number",
-      description: "$",
     },
     {
       name: "image",
@@ -57,11 +40,6 @@ export default {
       title: "Image Alt",
       type: "string",
       description: "Description of image for accessibility",
-    },
-    {
-      title: "Event Ticket URL",
-      name: "ticketURL",
-      type: "url",
     },
   ],
   orderings: [

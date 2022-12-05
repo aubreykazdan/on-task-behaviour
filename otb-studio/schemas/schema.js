@@ -14,7 +14,7 @@ import contactCopy from "./documents/contactCopy";
 import form from "./objects/form";
 import gallery from "./documents/gallery";
 import twi from "./objects/twi";
-import eventsList from "./documents/eventsList";
+import eventsList from "./documents/events";
 import shopCopy from "./documents/shopCopy";
 import donateCopy from "./documents/donateCopy";
 import newsCopy from "./documents/newsCopy";

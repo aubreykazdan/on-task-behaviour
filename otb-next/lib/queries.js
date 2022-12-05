@@ -151,5 +151,5 @@ export const newsCopyQuery = `
 `;
 
 export const eventsQuery = `
-*[_type == "eventsList"][0]
+*[_type == "events"][0]
 `;

@@ -1,10 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import {
-  AiFillTwitterCircle,
-  AiFillSetting,
-  AiFillCopy,
-  AiOutlineShoppingCart,
-} from "react-icons/ai";
+import { AiFillTwitterCircle, AiFillSetting } from "react-icons/ai";
 import { MdLink } from "react-icons/md";
 import client from "part:@sanity/base/client";
 import EditIcon from "part:@sanity/base/edit-icon";
@@ -74,10 +69,7 @@ export default () =>
         .title("Shop Products")
         .child(S.documentTypeList("product").title("Shop Products")),
 
-      S.documentListItem()
-        .id("eventsList")
-        .schemaType("eventsList")
-        .title("Events List"),
+      S.documentListItem().id("events").schemaType("events").title("Events"),
 
       S.documentListItem()
         .id("gallery")
@@ -136,7 +128,7 @@ export default () =>
           "product",
           "category",
           "event",
-          "eventsList",
+          "events",
           "gallery",
           "twi",
         ].includes(listItem.getId());

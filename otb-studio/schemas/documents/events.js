@@ -1,6 +1,6 @@
 export default {
-  name: "eventsList",
-  title: "Events List",
+  name: "events",
+  title: "Events",
   type: "document",
   fields: [
     {
@@ -9,9 +9,9 @@ export default {
       type: "string",
     },
     {
-      name: "events",
-      title: "Events",
+      name: "eventItems",
       type: "array",
+      title: "Event Items",
       of: [{ type: "event" }],
     },
   ],

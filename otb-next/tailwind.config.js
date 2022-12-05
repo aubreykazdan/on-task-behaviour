@@ -20,7 +20,7 @@ module.exports = {
           DEFAULT: "#252028",
           hover: "#4C1C69",
           light: "#F49FE8",
-          lightest: "#FDD8F8",
+          lightest: "#f9fafb",
         },
       },
       fontFamily: {
