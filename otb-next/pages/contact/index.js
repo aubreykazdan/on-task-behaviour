@@ -9,38 +9,29 @@ import {
   socialsQuery,
 } from "../../lib/queries";
 import Content from "@/components/sanityContent";
+import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
+import ContactFourColumn from "@/components/layouts/contact/contactFourColumn";
 
 export default function Contact({ data }) {
   const router = useRouter();
-
-  const { contactCopy } = data;
-  const { content, title } = contactCopy;
 
   return router.isFallback ? (
     <p>Loading...</p>
   ) : (
     <Layout data={data}>
-      <div className="">
-        <h3 className="text-3xl text-purple mb-4">{title}</h3>
-        <Content blocks={content} />
-      </div>
+      <HeaderBrandedImage title="Contact Us" />
+      <ContactFourColumn />
     </Layout>
   );
 }
 
 export async function getServerSideProps({ params, preview = false }) {
-  const categories = await getClient(preview).fetch(categoriesQuery);
-  const settings = await getClient(preview).fetch(settingsQuery);
-  const socials = await getClient(preview).fetch(socialsQuery);
   const contactCopy = await getClient(preview).fetch(contactQuery);
   return {
     props: {
       preview,
       data: {
         contactCopy,
-        settings,
-        categories,
-        socials,
       },
     },
   };
