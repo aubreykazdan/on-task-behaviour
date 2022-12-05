@@ -151,5 +151,18 @@ export const newsCopyQuery = `
 `;
 
 export const eventsQuery = `
-*[_type == "events"][0]
+*[_type == "events"][0]{
+  ...,
+  eventItems[]{
+    ...,
+    image{
+    asset,
+    crop,
+    hotspot,
+    "aspectRatio": asset->metadata.dimensions.aspectRatio,
+    "height": asset->metadata.dimensions.height,
+    "width": asset->metadata.dimensions.width,
+  },
+  }
+}
 `;

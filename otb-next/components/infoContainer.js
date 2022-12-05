@@ -1,4 +1,4 @@
-import Content from "./content";
+import Content from "./sanityContent";
 
 export default function InfoContainer({ item }) {
   const { alt, image, title, content, startDate } = item;

@@ -1,5 +1,5 @@
-import Content from "../content";
-import Img from "../img";
+import Content from "../sanityContent";
+import Img from "../nextImage";
 import Section from "../section";
 
 export default function TextWithIllustration({ copy }) {

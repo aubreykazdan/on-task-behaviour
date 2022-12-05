@@ -8,7 +8,7 @@ import {
   settingsQuery,
   socialsQuery,
 } from "../../lib/queries";
-import Content from "@/components/content";
+import Content from "@/components/sanityContent";
 
 export default function Contact({ data }) {
   const router = useRouter();
