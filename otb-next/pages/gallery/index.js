@@ -12,23 +12,24 @@ import {
 import TextWithIllustration from "@/components/sections/twi";
 import EventImg from "@/components/eventImg";
 import InfoContainer from "@/components/infoContainer";
+import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
 
 export default function Gallery({ data }) {
   const router = useRouter();
-  const { galleryItems, galleryCopy } = data;
+  const { galleryItems } = data;
   const { items } = galleryItems;
-  const { content, title, image, alt } = galleryCopy;
 
   return router.isFallback ? (
     <p>Loading...</p>
   ) : (
     <Layout data={data}>
+      <HeaderBrandedImage title="Gallery" />
       <div className="">
         <TextWithIllustration copy={galleryCopy} />
       </div>
       <div className="border-b mb-4"></div>
       <div>
-        {items &&
+        {/* {items &&
           items.map((item) => {
             const { _key, alt, image } = item;
             return (
@@ -37,7 +38,7 @@ export default function Gallery({ data }) {
                 <EventImg image={image} alt={alt} />
               </div>
             );
-          })}
+          })} */}
       </div>
     </Layout>
   );

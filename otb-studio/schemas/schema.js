@@ -6,8 +6,6 @@ import siteSettings from "./documents/siteSettings";
 import event from "./documents/event";
 import product from "./documents/product";
 import cta from "./objects/cta";
-import category from "./documents/category";
-import socials from "./documents/socials";
 import aboutCopy from "./documents/aboutCopy";
 import homeCopy from "./documents/homeCopy";
 import contactCopy from "./documents/contactCopy";
@@ -41,8 +39,6 @@ export default createSchema({
     eventsList,
     product,
     cta,
-    category,
-    socials,
     gallery,
     twi,
   ]),

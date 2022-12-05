@@ -22,15 +22,6 @@ export const navQuery = `
 }
 `;
 
-export const categoriesQuery = `
-*[_type == "category"] | order(order asc){
-  "id": _id,
-  title,
-  "slug": slug.current,
-  "fullPath": fullPath.current,
-}
-`;
-
 export const aboutQuery = `
 *[_type == "aboutCopy"][0]{
   ...,

@@ -15,13 +15,13 @@ export default {
       name: "title",
       type: "string",
     },
-    {
-      title: "Path",
-      name: "path",
-      type: "reference",
-      fieldset: "link",
-      to: [{ type: "category" }, { type: "product" }],
-    },
+    // {
+    //   title: "Path",
+    //   name: "path",
+    //   type: "reference",
+    //   fieldset: "link",
+    //   to: [{ type: "category" }, { type: "product" }],
+    // },
     {
       title: "External link",
       name: "link",
