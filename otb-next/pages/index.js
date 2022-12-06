@@ -1,5 +1,4 @@
 import { getClient } from "../lib/sanity.server";
-import { settingsQuery, socialsQuery } from "../lib/queries";
 
 import Layout from "../components/layout";
 import Container from "@/components/container";
@@ -7,7 +6,7 @@ import Link from "next/link";
 
 export default function Home({ data }) {
   return (
-    <Layout data={data}>
+    <Layout>
       <section className="lg:relative">
         <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-48 lg:text-left">
           <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
@@ -63,15 +62,10 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps({ preview = false }) {
-  const settings = await getClient(preview).fetch(settingsQuery);
-  const socials = await getClient(preview).fetch(socialsQuery);
-
   return {
     props: {
       preview,
-      data: {
-        settings,
-      },
+      data: {},
     },
   };
 }

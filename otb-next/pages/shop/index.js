@@ -2,7 +2,6 @@ import { getClient } from "../../lib/sanity.server";
 import { useRouter } from "next/router";
 
 import Layout from "../../components/layout";
-import { settingsQuery } from "../../lib/queries";
 import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
 import ContentTwoColumnsImage from "@/components/layouts/content/contentTwoColumnsImage";
 import Link from "next/link";
@@ -43,13 +42,10 @@ export default function Shop({ data, products }) {
 }
 
 export async function getServerSideProps({ params, preview = false }) {
-  const settings = await getClient(preview).fetch(settingsQuery);
   return {
     props: {
       preview,
-      data: {
-        settings,
-      },
+      data: {},
     },
   };
 }

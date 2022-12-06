@@ -2,14 +2,12 @@ import { getClient } from "../../lib/sanity.server";
 import { useRouter } from "next/router";
 
 import Layout from "../../components/layout";
-import { galleryQuery } from "../../lib/queries";
+// import { galleryQuery } from "../../lib/queries";
 import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
 import Container from "@/components/container";
 
 export default function Gallery({ data }) {
   const router = useRouter();
-  // const { galleryItems } = data;
-  // const { items } = galleryItems;
 
   return router.isFallback ? (
     <p>Loading...</p>
