@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SiTiktok, SiInstagram } from "react-icons/si";
 
 const navigation = {
@@ -54,13 +55,10 @@ export default function Footer() {
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
-            <div key={item.name} className="px-5 py-2">
-              <a
-                href={item.href}
-                className="text-base text-gray-500 hover:text-gray-900"
-              >
-                {item.name}
-              </a>
+            <div key={item.name} className="px-5">
+              <div className="text-base text-gray-500 hover:text-gray-900">
+                <Link href={item.href}>{item.name}</Link>
+              </div>
             </div>
           ))}
         </nav>
@@ -69,6 +67,8 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
+              target="_blank"
+              rel="noreferrer"
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">{item.name}</span>

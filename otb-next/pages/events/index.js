@@ -5,6 +5,7 @@ import Layout from "../../components/layout";
 import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
 import EventSplitWithImage from "@/components/layouts/event/eventSplitWithImage";
 import Container from "@/components/container";
+import { eventsQuery } from "@/lib/queries";
 
 export default function Events({ data }) {
   const router = useRouter();
