@@ -5,13 +5,13 @@ import Layout from "../../components/layout";
 import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
 import Container from "@/components/container";
 
-export default function Gallery({ data }) {
+export default function Gallery({}) {
   const router = useRouter();
 
   return router.isFallback ? (
     <p>Loading...</p>
   ) : (
-    <Layout data={data}>
+    <Layout>
       <HeaderBrandedImage title="Gallery" />
       <Container>
         <h2>Check back later for updates...</h2>
