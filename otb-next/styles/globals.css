@@ -26,31 +26,15 @@ h4 {
 }
 
 .btn {
-  @apply w-max text-white inline-flex items-center shadow-sm transition
-        font-medium bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 
-        focus:ring-offset-2 focus:ring-accent cursor-pointer;
+  @apply w-fit inline-flex items-center shadow-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer px-6 py-2 rounded-lg;
 }
 
-.btn-light {
-  @apply w-max  inline-flex items-center shadow-sm transition text-black
-        font-medium bg-white hover:bg-accent-hover focus:outline-none focus:ring-2 hover:text-white focus:text-white
-        focus:ring-offset-2 focus:ring-accent cursor-pointer;
+.btn-white {
+  @apply text-black bg-white hover:bg-accent-hover hover:text-white;
 }
 
-.btn-sm {
-  @apply px-3 py-2 text-sm leading-4 rounded-md;
-}
-
-.btn-md {
-  @apply px-4 py-2 text-sm rounded-md;
-}
-
-.btn-lg {
-  @apply px-6 py-3 text-base rounded-md;
-}
-
-.btn-xl {
-  @apply px-8 py-4 text-base md:px-6 md:py-3 md:text-lg rounded-xl;
+.btn-accent {
+  @apply text-white bg-accent hover:bg-accent-hover hover:text-black;
 }
 
 .nav-link {

@@ -64,7 +64,7 @@ export default function Header({}) {
             ))}
           </Popover.Group>
           <Link href="/donate">
-            <div className="btn btn-lg">Donate</div>
+            <div className="btn btn-accent">Donate</div>
           </Link>
         </div>
       </div>

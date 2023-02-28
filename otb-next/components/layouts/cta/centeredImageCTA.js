@@ -27,7 +27,7 @@ export default function CenteredImageCTA({
               <p className="mt-2">{description}</p>
               <div className="mt-4">
                 <Link aria-lavel={ariaLabel} href={buttonPath}>
-                  <div className="btn-light btn-lg">{buttonText}</div>
+                  <div className="btn btn-white">{buttonText}</div>
                 </Link>
               </div>
             </div>

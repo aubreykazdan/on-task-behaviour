@@ -59,7 +59,7 @@ export default function CTAOverlappingImage({}) {
                 </Link>
               </p>
               <a
-                className="block btn-light btn-lg"
+                className="block btn btn-white"
                 href="https://square.link/u/jR5tglCy"
                 rel="noreferrer"
                 target="_blank"
