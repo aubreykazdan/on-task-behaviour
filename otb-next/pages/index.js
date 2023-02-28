@@ -1,8 +1,6 @@
 import { getClient } from "../lib/sanity.server";
 
 import Layout from "../components/layout";
-import Container from "@/components/container";
-import Link from "next/link";
 import HeroImageSplit from "@/components/layouts/hero/heroImageSplit";
 import CenteredImageCTA from "@/components/layouts/cta/centeredImageCTA";
 

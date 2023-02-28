@@ -14,7 +14,9 @@ export default function About({ data }) {
   ) : (
     <Layout data={data}>
       <HeaderBrandedImage title="About Us" />
-      <ContentSplitImage />
+      <div className="py-8 sm:py-16">
+        <ContentSplitImage />
+      </div>
     </Layout>
   );
 }

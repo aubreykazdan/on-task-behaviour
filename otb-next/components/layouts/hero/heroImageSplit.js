@@ -16,9 +16,9 @@ export default function HeroImageSplit({}) {
       </div>
       <div className="relative h-80 w-full sm:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
         <img
-          className="absolute inset-0 h-full w-full object-cover object-right lg:rounded-b-xl"
+          className="absolute inset-0 h-full w-full object-cover object-right lg:rounded-bl-xl"
           src="/assets/charlotte.png"
-          alt=""
+          alt="Chihuhua smiling"
         />
       </div>
     </section>

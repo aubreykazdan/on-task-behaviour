@@ -21,12 +21,10 @@ export default function CenteredImageCTA({
           </div>
           <div className="relative bg-gray-900 bg-opacity-75 py-32 px-6 sm:py-32 sm:px-12 lg:px-16 text-white">
             <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-              <h2 id="social-impact-heading" className="">
-                {title}
-              </h2>
+              <h2 id="social-impact-heading">{title}</h2>
               <p className="mt-2">{description}</p>
-              <div className="mt-4">
-                <Link aria-lavel={ariaLabel} href={buttonPath}>
+              <div aria-label={ariaLabel} className="mt-4">
+                <Link href={buttonPath}>
                   <div className="btn btn-white">{buttonText}</div>
                 </Link>
               </div>

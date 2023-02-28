@@ -12,10 +12,8 @@ export default function HeaderBrandedImage({ title }) {
           aria-hidden="true"
         />
       </div>
-      <div className="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-0">
-          {title}
-        </h1>
+      <div className="relative mx-auto max-w-7xl py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+        <h1 className="text-white">{title}</h1>
       </div>
     </div>
   );
