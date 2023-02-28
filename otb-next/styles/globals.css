@@ -7,21 +7,22 @@
   font-family: "Montserrat", sans-serif;
 }
 
+body {
+  @apply text-base md:text-lg;
+}
+
 h1 {
-  @apply mb-4 md:mb-6 text-4xl lg:text-5xl font-bold leading-normal tracking-normal text-accent;
+  @apply text-4xl lg:text-5xl font-bold leading-normal tracking-normal text-accent;
 }
 
 h2 {
-  @apply mb-4 md:mb-6 text-3xl lg:text-4xl font-semibold leading-normal tracking-normal text-accent;
+  @apply text-3xl lg:text-4xl font-semibold leading-normal tracking-normal text-accent;
 }
 h3 {
-  @apply mb-4 md:mb-6 text-2xl lg:text-3xl font-normal  leading-normal tracking-normal text-accent;
+  @apply text-2xl lg:text-3xl font-normal  leading-normal tracking-normal text-accent;
 }
 h4 {
-  @apply mb-4 md:mb-6 text-xl lg:text-2xl font-normal leading-normal tracking-normal text-accent;
-}
-p {
-  @apply mb-4 md:mb-6 text-sm lg:text-base font-normal leading-normal tracking-normal text-accent;
+  @apply text-xl lg:text-2xl font-normal leading-normal tracking-normal text-accent;
 }
 
 .btn {
@@ -52,6 +53,16 @@ p {
   @apply px-8 py-4 text-base md:px-6 md:py-3 md:text-lg rounded-xl;
 }
 
-.navLink {
-  @apply text-sm lg:text-base font-normal leading-normal tracking-normal text-accent  hover:text-accent-hover focus:text-accent-hover focus:underline hover:underline cursor-pointer;
+.nav-link {
+  @apply text-sm lg:text-base font-normal leading-normal tracking-normal text-accent  hover:text-accent-hover cursor-pointer;
+}
+
+.nav-animated {
+  text-decoration: none;
+  background: linear-gradient(#252028, #252028) bottom / 0 0.1em no-repeat;
+  transition: 0.2s background-size;
+}
+
+.nav-animated:hover {
+  background-size: 100% 0.1em;
 }

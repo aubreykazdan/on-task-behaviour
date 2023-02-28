@@ -11,7 +11,7 @@ export default function Home({ data }) {
         <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-48 lg:text-left">
           <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
             <h1 className="">
-              <span className="block xl:inline">Welcome to</span>{" "}
+              Welcome to
               <span className="block xl:inline">On Task</span>
             </h1>
             <p className="mx-auto max-w-md text-lg sm:text-xl md:max-w-3xl">
