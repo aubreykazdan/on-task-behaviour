@@ -1,3 +1,5 @@
+import NextImage from "@/components/nextImage";
+
 export default function FeatureWithScreenshot({
   flipped,
   title,
@@ -17,11 +19,9 @@ export default function FeatureWithScreenshot({
               </div>
             </div>
           </div>
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            className="w-full md:-ml-4 lg:-ml-0"
-          />
+          <div className="w-full md:-ml-4 lg:-ml-0">
+            <NextImage imageSrc={imageSrc} imageAlt={imageAlt} />
+          </div>
         </div>
       </div>
     </div>

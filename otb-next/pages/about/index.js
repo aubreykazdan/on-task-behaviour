@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import Layout from "../../components/layout";
 import { settingsQuery } from "../../lib/queries";
 import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
-import ContentSplitImage from "@/components/layouts/content/contentSplitImage";
 import FeatureWithScreenshot from "@/components/layouts/features/featureWithScreenshot";
 
 export default function About({ data }) {
