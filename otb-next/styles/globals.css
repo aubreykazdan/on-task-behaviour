@@ -12,17 +12,17 @@ body {
 }
 
 h1 {
-  @apply text-4xl lg:text-5xl font-bold leading-normal tracking-normal text-accent;
+  @apply text-4xl lg:text-5xl font-bold leading-normal tracking-normal;
 }
 
 h2 {
-  @apply text-3xl lg:text-4xl font-semibold leading-normal tracking-normal text-accent;
+  @apply text-3xl lg:text-4xl font-semibold leading-normal tracking-normal;
 }
 h3 {
-  @apply text-2xl lg:text-3xl font-normal  leading-normal tracking-normal text-accent;
+  @apply text-2xl lg:text-3xl font-normal  leading-normal tracking-normal;
 }
 h4 {
-  @apply text-xl lg:text-2xl font-normal leading-normal tracking-normal text-accent;
+  @apply text-xl lg:text-2xl font-normal leading-normal tracking-normal;
 }
 
 .btn {
@@ -32,7 +32,7 @@ h4 {
 }
 
 .btn-light {
-  @apply w-max text-accent inline-flex items-center shadow-sm transition
+  @apply w-max  inline-flex items-center shadow-sm transition text-black
         font-medium bg-white hover:bg-accent-hover focus:outline-none focus:ring-2 hover:text-white focus:text-white
         focus:ring-offset-2 focus:ring-accent cursor-pointer;
 }
@@ -54,7 +54,11 @@ h4 {
 }
 
 .nav-link {
-  @apply text-sm lg:text-base font-normal leading-normal tracking-normal text-accent  hover:text-accent-hover cursor-pointer;
+  @apply text-base font-normal leading-normal tracking-normal   hover:text-accent-hover cursor-pointer w-fit;
+}
+
+.transition-animate {
+  transition: all ease 0.3s;
 }
 
 .nav-animated {

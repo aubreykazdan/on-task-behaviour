@@ -39,11 +39,11 @@ export default function Header({}) {
   return (
     <Popover className="relative bg-white shadow-md z-50">
       <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
-        <div className="flex cursor-pointer">
+        <div className="flex cursor-pointer overflow-hidden rounded-full">
           <span className="sr-only">On Task Behaviour</span>
           <Link href="/">
             <img
-              className="h-16 w-auto rounded-full"
+              className="h-20 w-auto hover:scale-150 transition-animate"
               src="/assets/pug-square.jpeg"
               alt="heart"
             />
