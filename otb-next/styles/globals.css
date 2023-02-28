@@ -55,3 +55,16 @@ h4 {
 .nav-animated:hover {
   background-size: 100% 0.1em;
 }
+
+.content-section ul {
+  @apply space-y-1;
+}
+
+.content-section ul li {
+  @apply relative ml-2;
+}
+
+.content-section ul li::before {
+  @apply inline-block w-4 text-lg text-accent;
+  content: "\2022";
+}

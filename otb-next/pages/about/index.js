@@ -48,9 +48,6 @@ export default function About({ data }) {
           </div>
         </FeatureWithScreenshot>
       </div>
-      {/* <div className="py-8 sm:py-16">
-        <ContentSplitImage />
-      </div> */}
     </Layout>
   );
 }
