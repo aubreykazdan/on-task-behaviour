@@ -35,10 +35,6 @@ const headerLinks = [
   },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Header({}) {
   return (
     <Popover className="relative bg-white shadow-md z-50">
