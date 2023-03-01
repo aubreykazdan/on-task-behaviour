@@ -58,7 +58,7 @@ export default function Footer() {
             <div key={item.name} className="px-5">
               <Link href={item.href} legacyBehavior>
                 <a
-                  className="accent-link nav-animated"
+                  className="accent-link"
                   aria-label={`Link to ${item.name} page`}
                 >
                   {item.name}
@@ -75,7 +75,7 @@ export default function Footer() {
               aria-label={`Go to On Task Studio's ${item.name} social page`}
               target="_blank"
               rel="noreferrer"
-              className="text-accent-blue hover:text-accent-hover"
+              className="text-accent-dark hover:text-accent"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-auto" aria-hidden="true" />

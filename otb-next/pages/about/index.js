@@ -19,9 +19,10 @@ export default function About({ data }) {
           title="Our Process"
           imageSrc="/assets/pug.jpeg"
           imageAlt="Pug under a blanket"
+          flipped
         >
-          <p className="text-gray-500">
-            <span className="font-bold text-accent">On Task</span> is a
+          <p>
+            <span className="font-bold text-accent-dark">On Task</span> is a
             nonprofit, community project primarily dedicated to supporting those
             struggling to stay focused on what is valuable to them.
           </p>

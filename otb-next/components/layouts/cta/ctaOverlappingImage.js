@@ -4,7 +4,7 @@ export default function CTAOverlappingImage({}) {
   return (
     <div className="relative">
       <div
-        className="absolute inset-x-0 top-0 hidden h-1/2 bg-gray-50 lg:block"
+        className="absolute inset-x-0 top-0 hidden h-1/2 lg:block"
         aria-hidden="true"
       />
       <div className="mx-auto max-w-7xl lg:px-8">
@@ -21,40 +21,40 @@ export default function CTAOverlappingImage({}) {
             </div>
           </div>
 
-          <div className="relative bg-accent-dark lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl lg:py-16">
+          <div className="relative shadow-2xl shadow-accent lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl lg:py-16">
             <div className="relative mx-auto max-w-md space-y-6 py-12 px-4 sm:max-w-3xl sm:py-16 sm:px-6 lg:col-span-6 lg:col-start-4 lg:max-w-none lg:p-0">
-              <h2 className=" text-white" id="join-heading">
+              <h2 className="" id="join-heading">
                 Thank You For Your Support!
               </h2>
-              <p className=" text-white">
+              <p>
                 We are a non-profit organization dedicated to creating community
                 spaces out of empty or under-utilized locations around the
                 world.
               </p>
-              <p className="text-white">
+              <p>
                 We rely on the support of generous contributors to continue and
                 expand our programming.
               </p>
-              <p className="text-white">
+              <p>
                 Every donation, no matter the amount, ensures we can support
                 those who benefit from these initiatives.
               </p>
-              <p className=" text-white">
+              <p>
                 If you are unable to contribute financially but would like to
                 offer support another way, we welcome you to reach out to us at{" "}
                 <a
                   href="mailto:hello@ontaskbehaviour.com"
-                  className="underline text-blue-400"
+                  className="accent-link"
                 >
                   hello@ontaskbehaviour.com
                 </a>{" "}
                 or by visiting our{" "}
                 <Link href="/contact" legacyBehavior>
-                  <a className="accent-link nav-animated">Contact Page</a>
+                  <a className="accent-link">Contact Page</a>
                 </Link>
               </p>
               <a
-                className="btn btn-white"
+                className="btn btn-accent"
                 href="https://square.link/u/jR5tglCy"
                 rel="noreferrer"
                 target="_blank"

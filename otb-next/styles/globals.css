@@ -31,19 +31,19 @@ h4 {
 }
 
 .btn-white {
-  @apply text-black bg-white hover:bg-accent-hover hover:text-white;
+  @apply text-black bg-white hover:bg-accent hover:text-white;
 }
 
 .btn-accent {
-  @apply text-white bg-accent hover:bg-accent-hover;
+  @apply bg-accent-lightest  hover:text-white hover:bg-accent-hover;
 }
 
 .nav-link {
-  @apply font-normal leading-normal tracking-normal   hover:text-accent cursor-pointer w-fit;
+  @apply font-normal leading-normal tracking-normal   hover:text-accent-hover cursor-pointer w-fit;
 }
 
 .mobile-toggle {
-  @apply inline-flex items-center justify-center rounded-lg p-2 text-accent hover:text-accent-hover focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent;
+  @apply inline-flex items-center justify-center rounded-lg p-2 text-accent-dark hover:bg-accent-lightest focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent;
 }
 
 .transition-animate {
@@ -52,7 +52,7 @@ h4 {
 
 .nav-animated {
   text-decoration: none;
-  background: linear-gradient(#252028, #252028) bottom / 0 0.1em no-repeat;
+  background: linear-gradient(#6d597a, #6d597a) bottom / 0 0.1em no-repeat;
   transition: 0.2s background-size;
 }
 
@@ -61,7 +61,7 @@ h4 {
 }
 
 .accent-link {
-  @apply text-accent-blue w-fit;
+  @apply text-accent-dark hover:text-accent w-fit underline;
 }
 
 .content-section ul {

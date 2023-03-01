@@ -7,13 +7,12 @@ module.exports = {
     extend: {
       colors: {
         accent: {
-          darkest: "#3F223B",
-          dark: "#6D2964",
-          DEFAULT: "#252028",
-          hover: "#4C1C69",
-          light: "#F49FE8",
-          lightest: "#f9fafb",
-          blue: "#1255cc"
+          dark: "#355070",
+          DEFAULT: "#e56b6f",
+          hover: "#6D597A",
+          light: "#e56b6f",
+          lightest: "#eaac8b",
+          blue: "#548cd2",
         },
       },
       fontFamily: {
