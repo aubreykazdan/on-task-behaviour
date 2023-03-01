@@ -89,7 +89,7 @@ export default function Footer() {
             href="https://aubreykazdan.com/"
             target="_blank"
             rel="noreferrer"
-            className="nav-animated accent-link"
+            className="accent-link"
             aria-label="Link to Aubrey Kazdan's personal portfolio"
           >
             Aubrey Kazdan

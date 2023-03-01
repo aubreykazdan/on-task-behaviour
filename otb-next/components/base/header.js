@@ -42,7 +42,7 @@ function classNames(...classes) {
 export default function Header({}) {
   return (
     <Popover className="relative bg-white shadow-md z-50">
-      <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+      <div className="flex items-center justify-between px-4 py-6 sm:px-6 lg:px-8 md:justify-start md:space-x-10">
         <div className="flex cursor-pointer overflow-hidden rounded-full">
           <span className="sr-only">On Task Behaviour</span>
           <Link href="/" ariaLabel="Go to home page" legacyBehavior>
@@ -62,7 +62,7 @@ export default function Header({}) {
           </Popover.Button>
         </div>
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
-          <Popover.Group as="nav" className="flex space-x-10">
+          <Popover.Group as="nav" className="flex space-x-6 lg:space-x-10">
             {headerLinks.map((item) => (
               <NavLink
                 key={item.name}
