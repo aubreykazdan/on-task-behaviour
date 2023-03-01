@@ -4,9 +4,22 @@ export default {
   type: "document",
   fields: [
     {
-      title: "Date",
+      title: "Start Time + Date",
       name: "startDate",
       type: "datetime",
+      options: {
+        dateFormat: "YYYY-MM-DD",
+        timeFormat: "HH:mm",
+        timeStep: 15,
+        calendarTodayLabel: "Today",
+      },
+    },
+    {
+      title: "End Time + Date",
+      name: "endDate",
+      type: "datetime",
+      description:
+        "OPTIONAL: If there is no end time, only the start time will show on the site.",
       options: {
         dateFormat: "YYYY-MM-DD",
         timeFormat: "HH:mm",
@@ -36,10 +49,18 @@ export default {
       },
     },
     {
-      name: "alt",
-      title: "Image Alt",
+      name: "imageAlt",
+      title: "Image Alternative Text",
       type: "string",
       description: "Description of image for accessibility",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "ticketUrl",
+      title: "Ticket Purchase Link",
+      type: "url",
+      description:
+        "OPTIONAL: Include link for ticket purchasing. IMPORTANT NOTE: Please preface link with http:// or https://",
     },
   ],
   orderings: [

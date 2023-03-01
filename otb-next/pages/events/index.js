@@ -17,17 +17,23 @@ export default function Events({ data }) {
   ) : (
     <Layout data={data}>
       <HeaderBrandedImage title="Events" />
-      {eventItems ? (
-        eventItems.map((item) => {
-          return <EventSplitWithImage key={item._key} event={item} />;
-        })
-      ) : (
-        <>
-          <Container>
-            <h3>Stay tuned for future events here...</h3>
-          </Container>
-        </>
-      )}
+      <section className="divide-y-2 divide-accent">
+        {eventItems ? (
+          eventItems.map((item) => {
+            return (
+              <div key={item._key}>
+                <EventSplitWithImage event={item} />
+              </div>
+            );
+          })
+        ) : (
+          <div className="py-8 sm:py-16">
+            <Container>
+              <h3>Stay tuned for future events here...</h3>
+            </Container>
+          </div>
+        )}
+      </section>
     </Layout>
   );
 }

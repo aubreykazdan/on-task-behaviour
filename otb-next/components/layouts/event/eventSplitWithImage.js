@@ -3,38 +3,67 @@ import NextImage from "@/components/nextImage";
 import SanityContent from "@/components/sanityContent";
 
 export default function EventSplitWithImage({ event }) {
-  const options = {
+  const dateOptions = {
     weekday: "long",
     day: "numeric",
     month: "long",
     year: "numeric",
   };
 
-  const { image, alt, title, content, startDate } = event;
-  return (
-    <Container>
-      <div className="relative bg-accent-lightest border">
-        {image && (
-          <div className="h-56 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2 overflow-hidden">
-            <NextImage image={image} alt={alt} />
-          </div>
-        )}
-        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-          <div className="md:ml-auto md:w-1/2 md:pl-10">
-            <h2 className="">{title}</h2>
-            <p className="">
-              {new Date(startDate).toLocaleDateString("en-us", options)}
-            </p>
+  const timeOptions = {
+    hour: "numeric",
+    minute: "numeric",
+  };
 
-            <SanityContent blocks={content} />
-            <div className="">
-              <div className="inline-flex rounded-md shadow">
-                <time dateTime="2008-02-14 20:00"></time>
+  const { image, imageAlt, title, content, startDate, endDate } = event;
+  return (
+    <div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-4 gap-x-8 sm:gap-y-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+          <div className="flex flex-col justify-center">
+            <div>
+              <div className="lg:pr-8">
+                <h2>{title}</h2>
+                <time dateTime={startDate} className="mt-2">
+                  {new Date(startDate).toLocaleDateString("en-us", dateOptions)}
+                </time>
+                {!endDate ? (
+                  <div className="mt-1">
+                    <p>
+                      {new Date(startDate).toLocaleTimeString(
+                        "en-US",
+                        timeOptions
+                      )}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="flex space-x-2 mt-1">
+                    <p>
+                      {new Date(startDate).toLocaleTimeString(
+                        "en-US",
+                        timeOptions
+                      )}
+                    </p>
+                    <span> - </span>
+                    <p>
+                      {new Date(endDate).toLocaleTimeString(
+                        "en-US",
+                        timeOptions
+                      )}
+                    </p>
+                  </div>
+                )}
+                <div className="mt-6">
+                  <SanityContent blocks={content} />
+                </div>
               </div>
             </div>
           </div>
+          <div className="w-full md:-ml-4 lg:-ml-0 shadow-lg h-fit">
+            <NextImage sanityImage={image} imageAlt={imageAlt} />
+          </div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
