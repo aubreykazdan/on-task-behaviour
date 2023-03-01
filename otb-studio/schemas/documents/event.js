@@ -56,6 +56,13 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      title: "Ticket Price",
+      name: "ticketPrice",
+      description:
+        "Ex/ $5, Pay What You Can, Donations Ranging from $10-$20, FREE",
+      type: "string",
+    },
+    {
       name: "ticketUrl",
       title: "Ticket Purchase Link",
       type: "url",

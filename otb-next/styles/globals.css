@@ -26,7 +26,7 @@ h4 {
 }
 
 .btn {
-  @apply w-fit inline-flex items-center shadow-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer px-6 py-2 rounded-lg;
+  @apply w-fit flex items-center shadow-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer px-6 py-2 rounded-lg;
   transition: all ease 0.3s;
 }
 
