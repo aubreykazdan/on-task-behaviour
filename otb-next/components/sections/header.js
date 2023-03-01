@@ -104,7 +104,11 @@ export default function Header({}) {
               <div className="mt-6">
                 <nav className="grid gap-6">
                   {headerLinks.map((item) => (
-                    <NavLink key={item.name} internal={item.href}>
+                    <NavLink
+                      key={item.name}
+                      internal={item.href}
+                      ariaLabel={`Link to ${item.name} page`}
+                    >
                       {item.name}
                     </NavLink>
                   ))}

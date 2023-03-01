@@ -3,9 +3,8 @@ export default function HeroImageSplit({}) {
     <section className="lg:relative">
       <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-48 lg:text-left">
         <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
-          <h1 className="">
-            Welcome to
-            <span className="block xl:inline"> On Task</span>
+          <h1>
+            Welcome to On Task
           </h1>
           <p className="mx-auto max-w-md  md:max-w-3xl mt-4">
             As we launch our second community space in Toronto, we are pleased
