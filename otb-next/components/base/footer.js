@@ -56,9 +56,14 @@ export default function Footer() {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5">
-              <div className="accent-link nav-animated">
-                <Link href={item.href}>{item.name}</Link>
-              </div>
+              <Link href={item.href} legacyBehavior>
+                <a
+                  className="accent-link nav-animated"
+                  aria-label={`Link to ${item.name} page`}
+                >
+                  {item.name}
+                </a>
+              </Link>
             </div>
           ))}
         </nav>
@@ -67,23 +72,25 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
+              aria-label={`Go to On Task Studio's ${item.name} social page`}
               target="_blank"
               rel="noreferrer"
-              className="text-accent hover:text-accent-hover"
+              className="text-accent-blue hover:text-accent-hover"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-auto" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="m text-center text-base text-gray-400">
+        <p className="m text-center text-base text-black">
           &copy; {new Date().getFullYear()} {""} On Task, Inc. All rights
           reserved. - Designed by{" "}
           <a
             href="https://aubreykazdan.com/"
             target="_blank"
             rel="noreferrer"
-            className="nav-animated hover:text-accent"
+            className="nav-animated accent-link"
+            aria-label="Link to Aubrey Kazdan's personal portfolio"
           >
             Aubrey Kazdan
           </a>

@@ -61,7 +61,7 @@ h4 {
 }
 
 .accent-link {
-  @apply text-accent-dark w-fit;
+  @apply text-accent-blue w-fit;
 }
 
 .content-section ul {

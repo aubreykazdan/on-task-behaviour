@@ -13,6 +13,7 @@ module.exports = {
           hover: "#4C1C69",
           light: "#F49FE8",
           lightest: "#f9fafb",
+          blue: "#1255cc"
         },
       },
       fontFamily: {
