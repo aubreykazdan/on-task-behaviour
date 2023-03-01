@@ -13,7 +13,9 @@ export default function Donate({ data }) {
   ) : (
     <Layout data={data}>
       <HeaderBrandedImage title="Donate" />
-      <CTAOverlappingImage />
+      <div className="py-8 sm:py-16">
+        <CTAOverlappingImage />
+      </div>
     </Layout>
   );
 }

@@ -29,6 +29,10 @@ const headerLinks = [
     name: "Contact",
     href: "/contact",
   },
+  {
+    name: "Donate",
+    href: "/donate",
+  },
 ];
 
 function classNames(...classes) {
@@ -122,7 +126,6 @@ export default function Header({}) {
                       {item.name}
                     </NavLink>
                   ))}
-                  <NavLink internal="/donate">Donate</NavLink>
                 </nav>
               </div>
             </div>

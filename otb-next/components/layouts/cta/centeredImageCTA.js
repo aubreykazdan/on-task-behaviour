@@ -23,9 +23,11 @@ export default function CenteredImageCTA({
             <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
               <h2 id="social-impact-heading">{title}</h2>
               <p className="mt-2">{description}</p>
-              <div aria-label={ariaLabel} className="mt-4">
-                <Link href={buttonPath}>
-                  <div className="btn btn-white">{buttonText}</div>
+              <div className="mt-4">
+                <Link href={buttonPath} legacyBehavior>
+                  <a aria-label={ariaLabel} className="btn btn-white">
+                    {buttonText}
+                  </a>
                 </Link>
               </div>
             </div>
