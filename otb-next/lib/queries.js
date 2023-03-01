@@ -144,7 +144,7 @@ export const newsCopyQuery = `
 export const eventsQuery = `
 *[_type == "events"][0]{
   ...,
-  eventItems[]{
+  eventItems[] | order(startDate asc){
     ...,
     image{
     asset,

@@ -13,12 +13,5 @@
 }
 
 .markdown a {
-  @apply text-accent-dark;
-  text-decoration: none;
-  background: linear-gradient(#252028, #252028) bottom / 0 0.1em no-repeat;
-  transition: 0.2s background-size;
-}
-
-.markdown a:hover {
-  background-size: 100% 0.1em;
+  @apply text-accent-dark hover:text-accent w-fit underline;
 }
