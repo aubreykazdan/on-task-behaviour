@@ -17,11 +17,12 @@ export default function Shop({ data, products }) {
 
       <div className="py-8 sm:py-16">
         <FeatureWithScreenshot
-          title="Ready for the New Year"
+          title="Ready for the New Year!"
           imageSrc="/assets/storefront.png"
           imageAlt="Storefront of On Task"
+          flipped
         >
-          <p className="text-gray-500">
+          <p>
             Currently all of our retail merchandise, which typically ranges from
             in house handmade goods, to unique clothing designs on consignment,
             is available in person only at 1124 College St in Toronto.
@@ -30,7 +31,7 @@ export default function Shop({ data, products }) {
             Keep watching this space for updates as we prepare to launch our
             online shop. If you would like to inquire about selling something
             here or in person, please visit our
-            <span className="nav-animated accent-link">
+            <span className="accent-link">
               <Link href="/contact"> Contact page.</Link>
             </span>
           </p>
