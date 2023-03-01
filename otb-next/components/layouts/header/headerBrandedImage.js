@@ -7,7 +7,7 @@ export default function HeaderBrandedImage({ title }) {
         alt="concrete heart"
       />
       <div
-        className="absolute inset-0 bg-gray-500 mix-blend-multiply -z-10"
+        className="absolute inset-0 bg-accent-dark mix-blend-multiply -z-10"
         aria-hidden="true"
       />
 

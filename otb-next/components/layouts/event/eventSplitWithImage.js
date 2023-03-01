@@ -35,7 +35,9 @@ export default function EventSplitWithImage({ event }) {
                 <h2>{title}</h2>
                 <div className="mt-4">
                   <time dateTime={startDate}>
-                    <span className="font-semibold text-accent">Date: </span>
+                    <span className="font-semibold text-accent-dark">
+                      Date:{" "}
+                    </span>
                     {new Date(startDate).toLocaleDateString(
                       "en-us",
                       dateOptions
@@ -44,7 +46,9 @@ export default function EventSplitWithImage({ event }) {
 
                   {!endDate ? (
                     <div className="flex space-x-2 mt-1">
-                      <span className="font-semibold text-accent">Time:</span>
+                      <span className="font-semibold text-accent-dark">
+                        Time:
+                      </span>
                       <p>
                         {new Date(startDate).toLocaleTimeString(
                           "en-US",
@@ -54,7 +58,9 @@ export default function EventSplitWithImage({ event }) {
                     </div>
                   ) : (
                     <div className="flex space-x-2 mt-1">
-                      <span className="font-semibold text-accent">Time:</span>
+                      <span className="font-semibold text-accent-dark">
+                        Time:
+                      </span>
                       <p>
                         {new Date(startDate).toLocaleTimeString(
                           "en-US",
@@ -73,7 +79,9 @@ export default function EventSplitWithImage({ event }) {
 
                   <div className="mt-1">
                     <p>
-                      <span className="font-semibold text-accent">Cost: </span>
+                      <span className="font-semibold text-accent-dark">
+                        Cost:{" "}
+                      </span>
                       {ticketPrice}
                     </p>
                   </div>
@@ -94,7 +102,7 @@ export default function EventSplitWithImage({ event }) {
                           viewBox="0 0 24 24"
                           stroke-width="2"
                           stroke="currentColor"
-                          class="w-5 h-5 mb-1 ml-2"
+                          class="w-5 h-5 ml-2"
                         >
                           <path
                             stroke-linecap="round"

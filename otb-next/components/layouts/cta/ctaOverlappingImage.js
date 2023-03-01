@@ -66,7 +66,7 @@ export default function CTAOverlappingImage({}) {
                   viewBox="0 0 24 24"
                   stroke-width="2"
                   stroke="currentColor"
-                  class="w-5 h-5 mb-1 ml-2"
+                  class="w-5 h-5 ml-2"
                 >
                   <path
                     stroke-linecap="round"

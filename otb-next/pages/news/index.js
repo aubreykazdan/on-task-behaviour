@@ -20,11 +20,11 @@ export default function News({ data }) {
           imageSrc="/assets/cat-toes.png"
           imageAlt="Cat lying down on a blanket."
         >
-          <p className="text-gray-500">
-            <span className="font-bold text-accent">We're Back!</span> While we
-            work to re-open in Los Angeles in the near future, please feel
-            welome to visit us in our newest space at 1124 College Street in
-            Toronto, Ontario, Canada! NOW OPEN.
+          <p>
+            <span className="font-bold text-accent-dark">We're Back!</span>{" "}
+            While we work to re-open in Los Angeles in the near future, please
+            feel welome to visit us in our newest space at 1124 College Street
+            in Toronto, Ontario, Canada! NOW OPEN.
           </p>
           <p className="mt-4">Our hours are as follows:</p>
           <div className="content-section">
