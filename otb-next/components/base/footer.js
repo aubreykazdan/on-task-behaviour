@@ -55,7 +55,7 @@ export default function Footer() {
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
-            <div key={item.name} className="px-5">
+            <div key={item.name} className="px-5 py-2">
               <Link href={item.href} legacyBehavior>
                 <a
                   className="accent-link"

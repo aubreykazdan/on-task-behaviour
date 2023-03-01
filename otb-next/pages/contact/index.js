@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import Layout from "../../components/layout";
 import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
-import ContactFourColumn from "@/components/layouts/contact/contactFourColumn";
+import ContactCard from "@/components/layouts/contact/contactCard";
 
 export default function Contact({ data }) {
   const router = useRouter();
@@ -14,7 +14,7 @@ export default function Contact({ data }) {
     <Layout data={data}>
       <HeaderBrandedImage title="Contact Us" />
       <div className="py-8 sm:py-16">
-        <ContactFourColumn />
+        <ContactCard />
       </div>
     </Layout>
   );
