@@ -13,7 +13,9 @@ export default function Contact({ data }) {
   ) : (
     <Layout data={data}>
       <HeaderBrandedImage title="Contact Us" />
-      <ContactFourColumn />
+      <div className="py-8 sm:py-16">
+        <ContactFourColumn />
+      </div>
     </Layout>
   );
 }

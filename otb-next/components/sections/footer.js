@@ -56,7 +56,7 @@ export default function Footer() {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5">
-              <div className="text-base text-gray-500 hover:text-gray-900">
+              <div className="accent-link nav-animated">
                 <Link href={item.href}>{item.name}</Link>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function Footer() {
               href={item.href}
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-gray-500"
+              className="text-accent hover:text-accent-hover"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-auto" aria-hidden="true" />
@@ -83,7 +83,7 @@ export default function Footer() {
             href="https://aubreykazdan.com/"
             target="_blank"
             rel="noreferrer"
-            className="underline hover:text-accent"
+            className="nav-animated hover:text-accent"
           >
             Aubrey Kazdan
           </a>

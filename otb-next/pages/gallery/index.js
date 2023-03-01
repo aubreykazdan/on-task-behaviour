@@ -13,9 +13,12 @@ export default function Gallery({}) {
   ) : (
     <Layout>
       <HeaderBrandedImage title="Gallery" />
+      <div className="py-8 sm:py-16">
+
       <Container>
         <h2>Check back later for updates...</h2>
       </Container>
+      </div>
     </Layout>
   );
 }

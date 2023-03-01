@@ -39,7 +39,11 @@ h4 {
 }
 
 .nav-link {
-  @apply text-base font-normal leading-normal tracking-normal   hover:text-accent-hover cursor-pointer w-fit;
+  @apply font-normal leading-normal tracking-normal   hover:text-accent-hover cursor-pointer w-fit;
+}
+
+.mobile-toggle {
+  @apply inline-flex items-center justify-center rounded-lg p-2 text-accent hover:text-accent-hover focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent;
 }
 
 .transition-animate {
