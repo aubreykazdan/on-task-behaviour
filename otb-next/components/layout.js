@@ -1,6 +1,6 @@
 import Meta from "./meta";
-import Footer from "./sections/footer";
-import Header from "./sections/header";
+import Footer from "./base/footer";
+import Header from "./base/header";
 
 export default function Layout({ children }) {
   return (

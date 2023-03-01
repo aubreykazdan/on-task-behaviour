@@ -41,12 +41,14 @@ export default function Header({}) {
       <div className="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div className="flex cursor-pointer overflow-hidden rounded-full">
           <span className="sr-only">On Task Behaviour</span>
-          <Link href="/">
-            <img
-              className="h-20 w-auto hover:scale-150 transition-animate"
-              src="/assets/pug-square.jpeg"
-              alt="heart"
-            />
+          <Link href="/" ariaLabel="Go to home page" legacyBehavior>
+            <a aria-label="Go to home page">
+              <img
+                className="h-20 w-auto hover:scale-150 transition-animate"
+                src="/assets/pug-square.jpeg"
+                alt="heart"
+              />
+            </a>
           </Link>
         </div>
         <div className="-my-2 -mr-2 md:hidden">
@@ -58,13 +60,19 @@ export default function Header({}) {
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-between">
           <Popover.Group as="nav" className="flex space-x-10">
             {headerLinks.map((item) => (
-              <NavLink key={item.name} internal={item.href}>
+              <NavLink
+                key={item.name}
+                internal={item.href}
+                ariaLabel={`Link to ${item.name} page`}
+              >
                 {item.name}
               </NavLink>
             ))}
           </Popover.Group>
-          <Link href="/donate">
-            <div className="btn btn-accent">Donate</div>
+          <Link href="/donate" legacyBehavior>
+            <a aria-label="Go to Donate page" className="btn btn-accent">
+              Donate
+            </a>
           </Link>
         </div>
       </div>
@@ -86,12 +94,14 @@ export default function Header({}) {
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div className="cursor-pointer">
-                  <Link href="/">
-                    <img
-                      className="h-16 w-auto rounded-full"
-                      src="/assets/pug-square.jpeg"
-                      alt="heart"
-                    />
+                  <Link href="/" legacyBehavior>
+                    <a aria-label="Go to home page">
+                      <img
+                        className="h-16 w-auto rounded-full"
+                        src="/assets/pug-square.jpeg"
+                        alt="heart"
+                      />
+                    </a>
                   </Link>
                 </div>
                 <div className="-mr-2">
@@ -102,7 +112,7 @@ export default function Header({}) {
                 </div>
               </div>
               <div className="mt-6">
-                <nav className="grid gap-6">
+                <nav className="grid gap-6 ml-2">
                   {headerLinks.map((item) => (
                     <NavLink
                       key={item.name}
