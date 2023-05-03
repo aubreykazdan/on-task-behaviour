@@ -26,47 +26,8 @@ export default () =>
 
       S.divider(),
 
-      S.documentListItem()
-        .id("aboutCopy")
-        .schemaType("aboutCopy")
-        .title("About"),
-
-      S.documentListItem()
-        .id("contactCopy")
-        .schemaType("contactCopy")
-        .title("Contact"),
-
-      S.documentListItem()
-        .id("donateCopy")
-        .schemaType("donateCopy")
-        .title("Donate"),
-
-      S.documentListItem()
-        .id("eventsCopy")
-        .schemaType("eventsCopy")
-        .title("Events"),
-
-      S.documentListItem()
-        .id("galleryCopy")
-        .schemaType("galleryCopy")
-        .title("Gallery"),
-
-      S.documentListItem().id("homeCopy").schemaType("homeCopy").title("Home"),
-
-      S.documentListItem().id("newsCopy").schemaType("newsCopy").title("News"),
-
-      S.documentListItem().id("shopCopy").schemaType("shopCopy").title("Shop"),
-
       ...S.documentTypeListItems().filter((listItem) => {
         return ![
-          "aboutCopy",
-          "homeCopy",
-          "contactCopy",
-          "shopCopy",
-          "donateCopy",
-          "newsCopy",
-          "galleryCopy",
-          "eventsCopy",
           "siteSettings",
           "navMenu",
           "cta",
