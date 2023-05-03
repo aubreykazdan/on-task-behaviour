@@ -10,10 +10,6 @@ const headerLinks = [
     href: "/about",
   },
   {
-    name: "News",
-    href: "/news",
-  },
-  {
     name: "Events",
     href: "/events",
   },
@@ -21,10 +17,10 @@ const headerLinks = [
     name: "Shop",
     href: "/shop",
   },
-  {
-    name: "Gallery",
-    href: "/gallery",
-  },
+  // {
+  //   name: "Gallery",
+  //   href: "/gallery",
+  // },
   {
     name: "Contact",
     href: "/contact",
