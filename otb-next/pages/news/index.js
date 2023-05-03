@@ -16,7 +16,7 @@ export default function News({ data }) {
 
       <div className="py-8 sm:py-16">
         <FeatureWithScreenshot
-          title="Our Process"
+          title="Our Progress"
           imageSrc="/assets/cat-toes.png"
           imageAlt="Cat lying down on a blanket."
         >
@@ -29,13 +29,38 @@ export default function News({ data }) {
           <p className="mt-4">Our hours are as follows:</p>
           <div className="content-section">
             <ul className="mt-4">
-              <li>Tuesday: 12pm - 7pm</li>
-              <li>Wednesday: 12pm - 7pm</li>
-              <li>Thursday: 12pm - 8pm</li>
-              <li>Friday: 12pm - 8pm</li>
-              <li>Saturday: 11am - 8pm</li>
-              <li>Sunday: 11am - 8pm</li>
-              <li>Monday: Closed</li>
+              <li>Monday: By appointment only</li>
+              <li>Tuesday: By appointment only</li>
+              <li>
+                Wednesday: 12pm - 7pm{" "}
+                <span className="italic block text-sm ml-4">
+                  * Open later for events
+                </span>
+              </li>
+              <li>
+                Thursday: 12pm - 7pm
+                <span className="italic block text-sm ml-4">
+                  * Open later for events
+                </span>
+              </li>
+              <li>
+                Friday: 12pm - 7pm{" "}
+                <span className="italic block text-sm ml-4">
+                  * Open later for events
+                </span>
+              </li>
+              <li>
+                Saturday: 12pm - 7pm{" "}
+                <span className="italic block text-sm ml-4">
+                  * Open later for events
+                </span>
+              </li>
+              <li>
+                Sunday: 12pm - 7pm{" "}
+                <span className="italic block text-sm ml-4">
+                  * Open later for events
+                </span>
+              </li>
             </ul>
           </div>
         </FeatureWithScreenshot>

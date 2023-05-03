@@ -69,11 +69,6 @@ export default function Header({}) {
               </NavLink>
             ))}
           </Popover.Group>
-          <Link href="/donate" legacyBehavior>
-            <a aria-label="Go to Donate page" className="btn btn-accent">
-              Donate
-            </a>
-          </Link>
         </div>
       </div>
 
