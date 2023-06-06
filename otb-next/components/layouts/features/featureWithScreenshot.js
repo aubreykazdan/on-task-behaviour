@@ -1,11 +1,12 @@
 import NextImage from "@/components/nextImage";
+import { urlForImage } from "@/lib/sanity";
+import Image from "next/image";
 
 export default function FeatureWithScreenshot({
   flipped,
   title,
   children,
-  imageSrc,
-  imageAlt,
+  image,
 }) {
   return !flipped ? (
     <div className="">
@@ -20,7 +21,14 @@ export default function FeatureWithScreenshot({
             </div>
           </div>
           <div className="w-full md:-ml-4 lg:-ml-0">
-            <NextImage imageSrc={imageSrc} imageAlt={imageAlt} />
+            <Image
+              alt={image.alt}
+              layout="responsive"
+              width={image.width}
+              height={image.height}
+              src={urlForImage(image.asset).url()}
+              className="object-cover object-center"
+            />
           </div>
         </div>
       </div>
@@ -38,7 +46,14 @@ export default function FeatureWithScreenshot({
         </div>
 
         <div className="w-full md:-ml-4 lg:-ml-0 lg:order-first">
-          <NextImage imageSrc={imageSrc} imageAlt={imageAlt} />
+          <Image
+            alt={image.alt}
+            layout="responsive"
+            width={image.width}
+            height={image.height}
+            src={urlForImage(image.asset).url()}
+            className="object-cover object-center"
+          />
         </div>
       </div>
     </div>

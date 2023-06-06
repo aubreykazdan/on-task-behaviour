@@ -15,3 +15,11 @@
 .markdown a {
   @apply text-accent-dark hover:text-accent w-fit underline;
 }
+
+.markdown ul li {
+  @apply ml-4;
+}
+
+.markdown em {
+  @apply text-base;
+}
