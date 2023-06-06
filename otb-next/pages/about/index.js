@@ -18,7 +18,7 @@ export default function About({ data }) {
       <HeaderBrandedImage title="About Us" />
       <div className="py-8 sm:py-16">
         <FeatureWithScreenshot
-          title="Our Process"
+          title={aboutCopy.title}
           image={aboutCopy.image}
           flipped
         >

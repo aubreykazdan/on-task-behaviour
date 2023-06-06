@@ -94,3 +94,18 @@ export const aboutCopyQuery = `
   }
 }
 `;
+
+export const shopCopyQuery = `
+*[_type == "shopCopy"][0]{
+  ...,
+  image{
+    alt,
+    asset,
+    crop,
+    hotspot,
+    "aspectRatio": asset->metadata.dimensions.aspectRatio,
+    "height": asset->metadata.dimensions.height,
+    "width": asset->metadata.dimensions.width,
+  }
+}
+`;

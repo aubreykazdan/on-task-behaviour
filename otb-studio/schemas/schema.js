@@ -12,6 +12,7 @@ import twi from "./objects/twi";
 import eventsList from "./documents/events";
 import homeCopy from "./documents/homeCopy";
 import aboutCopy from "./documents/aboutCopy";
+import shopCopy from "./documents/shopCopy";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,5 +30,6 @@ export default createSchema({
     twi,
     homeCopy,
     aboutCopy,
+    shopCopy,
   ]),
 });

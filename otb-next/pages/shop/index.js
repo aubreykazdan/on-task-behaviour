@@ -5,9 +5,12 @@ import Link from "next/link";
 import Layout from "../../components/layout";
 import HeaderBrandedImage from "@/components/layouts/header/headerBrandedImage";
 import FeatureWithScreenshot from "@/components/layouts/features/featureWithScreenshot";
+import { shopCopyQuery } from "@/lib/queries";
+import SanityContent from "@/components/sanityContent";
 
 export default function Shop({ data, products }) {
   const router = useRouter();
+  const { shopCopy } = data;
 
   return router.isFallback ? (
     <p>Loading...</p>
@@ -17,24 +20,11 @@ export default function Shop({ data, products }) {
 
       <div className="py-8 sm:py-16">
         <FeatureWithScreenshot
-          title="Ready for the New Year!"
-          imageSrc="/assets/storefront.png"
-          imageAlt="Storefront of On Task"
+          title={shopCopy.title}
+          image={shopCopy.image}
           flipped
         >
-          <p>
-            Currently all of our retail merchandise, which typically ranges from
-            in house handmade goods, to unique clothing designs on consignment,
-            is available in person only at 1124 College St in Toronto.
-          </p>
-          <p className="mt-4">
-            Keep watching this space for updates as we prepare to launch our
-            online shop. If you would like to inquire about selling something
-            here or in person, please visit our
-            <span className="accent-link">
-              <Link href="/contact"> Contact page.</Link>
-            </span>
-          </p>
+          <SanityContent blocks={shopCopy.content} />
         </FeatureWithScreenshot>
       </div>
     </Layout>
@@ -42,10 +32,11 @@ export default function Shop({ data, products }) {
 }
 
 export async function getServerSideProps({ params, preview = false }) {
+  const shopCopy = await getClient(preview).fetch(shopCopyQuery);
   return {
     props: {
       preview,
-      data: {},
+      data: { shopCopy },
     },
   };
 }

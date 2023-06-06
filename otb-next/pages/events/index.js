@@ -12,14 +12,18 @@ export default function Events({ data }) {
   const { eventsList } = data;
   const { eventItems } = eventsList;
 
+  const upcomingEvents = eventItems.filter((item) => {
+    return Date.parse(item.endDate) >= new Date();
+  });
+
   return router.isFallback ? (
     <p>Loading...</p>
   ) : (
     <Layout data={data}>
       <HeaderBrandedImage title="Events" />
       <section className="divide-y-2 divide-accent">
-        {eventItems ? (
-          eventItems.map((item) => {
+        {upcomingEvents ? (
+          upcomingEvents.map((item) => {
             return (
               <div key={item._key}>
                 <EventSplitWithImage event={item} />
