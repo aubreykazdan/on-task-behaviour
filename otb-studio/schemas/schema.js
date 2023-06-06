@@ -10,6 +10,7 @@ import form from "./objects/form";
 import gallery from "./documents/gallery";
 import twi from "./objects/twi";
 import eventsList from "./documents/events";
+import homeCopy from "./documents/homeCopy";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,5 +26,6 @@ export default createSchema({
     cta,
     gallery,
     twi,
+    homeCopy,
   ]),
 });

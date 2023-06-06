@@ -26,6 +26,11 @@ export default () =>
 
       S.divider(),
 
+      // S.documentListItem()
+      // .id("aboutCopy")
+      // .schemaType("aboutCopy")
+      // .title("About"),
+
       ...S.documentTypeListItems().filter((listItem) => {
         return ![
           "siteSettings",
