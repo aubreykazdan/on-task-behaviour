@@ -1,4 +1,3 @@
-import NextImage from "@/components/nextImage";
 import { urlForImage } from "@/lib/sanity";
 import Image from "next/image";
 
