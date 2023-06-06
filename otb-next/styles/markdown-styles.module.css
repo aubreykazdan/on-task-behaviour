@@ -20,6 +20,6 @@
   @apply ml-4;
 }
 
-.markdown em {
+.markdown ul li em {
   @apply text-base;
 }

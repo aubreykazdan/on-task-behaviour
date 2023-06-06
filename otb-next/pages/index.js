@@ -9,7 +9,6 @@ import SanityContent from "@/components/sanityContent";
 
 export default function Home({ data }) {
   const { homeCopy } = data;
-  console.log(homeCopy);
   return (
     <Layout>
       <div className="pb-8 sm:pb-16">
