@@ -55,3 +55,27 @@ export const eventsQuery = `
   }
 }
 `;
+
+export const homeCopyQuery = `
+*[_type == "homeCopy"][0]{
+  ...,
+  heroImage{
+    alt,
+    asset,
+    crop,
+    hotspot,
+    "aspectRatio": asset->metadata.dimensions.aspectRatio,
+    "height": asset->metadata.dimensions.height,
+    "width": asset->metadata.dimensions.width,
+  },
+  imageTwo{
+    alt,
+    asset,
+    crop,
+    hotspot,
+    "aspectRatio": asset->metadata.dimensions.aspectRatio,
+    "height": asset->metadata.dimensions.height,
+    "width": asset->metadata.dimensions.width,
+  }
+}
+`;

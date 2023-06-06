@@ -4,12 +4,19 @@ import Layout from "../components/layout";
 import HeroImageSplit from "@/components/layouts/hero/heroImageSplit";
 import CenteredImageCTA from "@/components/layouts/cta/centeredImageCTA";
 import FeatureWithScreenshot from "@/components/layouts/features/featureWithScreenshot";
+import { homeCopyQuery } from "@/lib/queries";
 
 export default function Home({ data }) {
+  const { homeCopy } = data;
+  console.log(homeCopy);
   return (
     <Layout>
       <div className="pb-8 sm:pb-16">
-        <HeroImageSplit />
+        <HeroImageSplit
+          title={homeCopy.heroTitle}
+          content={homeCopy.heroContent}
+          image={homeCopy.heroImage}
+        />
       </div>
 
       <div className="pb-8 sm:pb-16">
@@ -78,10 +85,11 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps({ preview = false }) {
+  const homeCopy = await getClient(preview).fetch(homeCopyQuery);
   return {
     props: {
       preview,
-      data: {},
+      data: { homeCopy },
     },
   };
 }

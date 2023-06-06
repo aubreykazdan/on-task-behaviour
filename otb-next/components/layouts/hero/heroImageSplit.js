@@ -1,23 +1,26 @@
-export default function HeroImageSplit({}) {
+import SanityContent from "@/components/sanityContent";
+import Image from "next/image";
+import { urlForImage } from "/lib/sanity";
+
+export default function HeroImageSplit({ title, content, image }) {
   return (
     <section className="lg:relative">
       <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-48 lg:text-left">
         <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
-          <h1>
-            Welcome to On Task
-          </h1>
+          <h1>{title}</h1>
           <p className="mx-auto max-w-md  md:max-w-3xl mt-4">
-            As we launch our second community space in Toronto, we are pleased
-            to share our new and improved website so we may better connect and
-            share resources with our friends and family around the world.
+            <SanityContent blocks={content} />
           </p>
         </div>
       </div>
-      <div className="relative h-80 w-full sm:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2">
-        <img
-          className="absolute inset-0 h-full w-full object-cover object-right lg:rounded-bl-xl"
-          src="/assets/charlotte.png"
-          alt="Chihuhua smiling"
+      <div className="relative h-80 w-full sm:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-1/2 overflow-hidden">
+        <Image
+          alt={image.alt}
+          layout="responsive"
+          width={image.width}
+          height={image.height}
+          src={urlForImage(image.asset).url()}
+          className="object-cover object-center"
         />
       </div>
     </section>
