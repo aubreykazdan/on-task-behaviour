@@ -13,7 +13,7 @@
 }
 
 .markdown a {
-  @apply text-accent-dark hover:text-accent w-fit underline;
+  @apply text-accent-blue hover:text-accent w-fit underline;
 }
 
 .markdown ul li {

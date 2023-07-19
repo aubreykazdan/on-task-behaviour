@@ -24,7 +24,7 @@ export default function ContactCard({}) {
                     </a>
                   </dd>
                 </div>
-                <div className="mt-3">
+                {/* <div className="mt-3">
                   <dt className="sr-only">Website-Specific Email</dt>
                   <dd>
                     <p className="block">For Website-Specific Inquiries</p>
@@ -35,7 +35,7 @@ export default function ContactCard({}) {
                       hello@ontaskbehaviour.com
                     </a>
                   </dd>
-                </div>
+                </div> */}
               </dl>
             </div>
             <div className="rounded-2xl bg-gray-100 p-10">
